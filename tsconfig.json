@@ -21,7 +21,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@components/*": ["./src/common/components/*"]
+      "@components/*": ["./src/common/components/*"],
+      "@types": ["./src/common/types/index.ts"],
+      "@utils/*": ["./src/common/utils/*"]
     },
     "typeRoots": ["./node_modules/@types"]
   },
