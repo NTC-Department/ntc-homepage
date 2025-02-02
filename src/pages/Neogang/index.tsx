@@ -1,35 +1,33 @@
 import Snapper from "@components/Snapper";
+import { contentSection } from "@consts/contentSection";
 
 const NeogangPage = () => {
-  const handleOnFocus = (id: string) => {
-    console.log("focus: ", id);
-  };
   return (
     <div>
       <Snapper.Container>
-        <Snapper.Section onFocus={handleOnFocus} id="home" primaryColor="white">
-          <h1>Home - Neogang</h1>
+        <Snapper.Section id={contentSection.neogang.home} primaryColor="white">
+          <h1>Home Section</h1>
+        </Snapper.Section>
+        <Snapper.Section id={contentSection.neogang.shop} primaryColor="white">
+          <h1>Shop Section</h1>
         </Snapper.Section>
         <Snapper.Section
-          onFocus={handleOnFocus}
-          id="about"
+          id={contentSection.neogang.latestRelease}
           primaryColor="white"
         >
-          <h1>About us</h1>
+          <h1>Partnership</h1>
         </Snapper.Section>
         <Snapper.Section
-          onFocus={handleOnFocus}
-          id="purchase"
+          id={contentSection.neogang.ourArtist}
           primaryColor="white"
         >
-          <h1>Purchase</h1>
+          <h1>Community</h1>
         </Snapper.Section>
         <Snapper.Section
-          onFocus={handleOnFocus}
-          id="contact"
+          id={contentSection.neogang.aboutUs}
           primaryColor="white"
         >
-          <h1>Contact</h1>
+          <h1>About Us</h1>
         </Snapper.Section>
       </Snapper.Container>
     </div>

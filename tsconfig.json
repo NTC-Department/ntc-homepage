@@ -22,8 +22,12 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@components/*": ["./src/common/components/*"],
+      "@consts/*": ["./src/common/consts/*"],
+      "@hooks/*": ["./src/common/hooks/*"],
       "@types": ["./src/common/types/index.ts"],
-      "@utils/*": ["./src/common/utils/*"]
+      "@utils/*": ["./src/common/utils/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@pages/*": ["./src/pages/*"]
     },
     "typeRoots": ["./node_modules/@types"]
   },

@@ -1,38 +1,31 @@
 import Snapper from "@components/Snapper";
+import NTCLayout from "./Layout";
+import { contentSection } from "@consts/contentSection";
 
 const NTCPage = () => {
-  const handleOnFocus = (id: string) => {
-    console.log("focus: ", id);
-  };
   return (
-    <div>
+    <NTCLayout>
       <Snapper.Container>
-        <Snapper.Section onFocus={handleOnFocus} id="home" primaryColor="white">
-          <h1>Home</h1>
+        <Snapper.Section id={contentSection.ntc.home} primaryColor="white">
+          <h1>Home Section</h1>
+        </Snapper.Section>
+        <Snapper.Section id={contentSection.ntc.shop} primaryColor="white">
+          <h1>Shop Section</h1>
         </Snapper.Section>
         <Snapper.Section
-          onFocus={handleOnFocus}
-          id="about"
+          id={contentSection.ntc.partnership}
           primaryColor="white"
         >
-          <h1>About us</h1>
+          <h1>Partnership</h1>
         </Snapper.Section>
-        <Snapper.Section
-          onFocus={handleOnFocus}
-          id="purchase"
-          primaryColor="white"
-        >
-          <h1>Purchase</h1>
+        <Snapper.Section id={contentSection.ntc.community} primaryColor="white">
+          <h1>Community</h1>
         </Snapper.Section>
-        <Snapper.Section
-          onFocus={handleOnFocus}
-          id="contact"
-          primaryColor="white"
-        >
-          <h1>Contact</h1>
+        <Snapper.Section id={contentSection.ntc.aboutUs} primaryColor="white">
+          <h1>About Us</h1>
         </Snapper.Section>
       </Snapper.Container>
-    </div>
+    </NTCLayout>
   );
 };
 

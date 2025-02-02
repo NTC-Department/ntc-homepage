@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
 import clsx from "clsx";
+import useSection from "@hooks/useSection";
 
 interface Props {
   id: string;
@@ -8,19 +9,12 @@ interface Props {
   className?: string;
   isCentered?: boolean;
   primaryColor: "white" | "black";
-  onFocus: (id: string) => void;
 }
 
 const Section = (props: Props) => {
-  const {
-    id,
-    children,
-    className,
-    isCentered = true,
-    primaryColor,
-    onFocus,
-  } = props;
+  const { id, children, className, isCentered = true, primaryColor } = props;
 
+  const { onSectionChange } = useSection();
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -30,7 +24,7 @@ const Section = (props: Props) => {
 
   useEffect(() => {
     if (inView) {
-      onFocus(id);
+      onSectionChange(id);
       timeoutRef.current = setTimeout(() => {
         sectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 2000);
