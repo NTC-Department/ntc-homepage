@@ -10,7 +10,7 @@ const Container = (props: Props) => {
   const { children, className } = props;
 
   const mainRef = useRef<HTMLElement | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     return () => {
