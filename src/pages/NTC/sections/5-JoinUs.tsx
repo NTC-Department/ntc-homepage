@@ -36,7 +36,7 @@ const JoinUsSection = () => {
 
 const CommunityCard = () => {
   return (
-    <div className="h-[17.5rem] relative">
+    <div className="h-full relative">
       <img
         src={placeholderImage}
         className="w-full h-full object-cover rounded-lg"
