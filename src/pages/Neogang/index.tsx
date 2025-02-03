@@ -4,6 +4,7 @@ import HomeSection from "./sections/1-Home";
 import WhoAreWeSection from "./sections/2-WhoAreWe";
 import LatestReleaseSection from "./sections/3-LatestRelease";
 import OurArtistSection from "./sections/4-OurArtist";
+import MoreInfoSection from "./sections/5-MoreInfo";
 
 const NeogangPage = () => {
   return (
@@ -22,7 +23,7 @@ const NeogangPage = () => {
           <OurArtistSection />
         </Snapper.Section>
         <Snapper.Section id={contentSection.neogang.aboutUs}>
-          <h1>About Us</h1>
+          <MoreInfoSection />
         </Snapper.Section>
       </Snapper.Container>
     </div>
