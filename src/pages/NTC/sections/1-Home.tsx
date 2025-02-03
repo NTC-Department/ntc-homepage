@@ -1,7 +1,39 @@
 import placeholderImage from "@assets/content/placeholder.jpg";
+import useWindowSize from "@hooks/useWindowSize";
 
 const HomeSection = () => {
-  return (
+  const { isMobile } = useWindowSize();
+
+  const mobileView = (
+    <div className="h-full w-full flex flex-col items-center px-8 py-36">
+      {/* component: content carousel card */}
+      <div className="border h-1/2 bg-black w-full px-6 py-4 rounded-t-3xl">
+        {/* text: image description */}
+        <div className="text-white h-1/2">
+          <h1 className="text-3xl border">TITLE</h1>
+          <p className="text-lg h-full border">Description</p>
+          <div className="h-16 border pt-2">
+            <button className="border h-full">Learn More button</button>
+          </div>
+        </div>
+      </div>
+
+      {/* image: carousel */}
+      <div className="relative overflow-hidden rounded-b-3xl">
+        <img className="w-full h-full object-cover" src={placeholderImage} />
+
+        {/* style: black gradient that mask images (bottom) */}
+        <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black/80 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black/50 to-transparent" />
+
+        <div className="absolute bottom-3 right-6">
+          <div className="border">Carousel Button</div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const desktopView = (
     <div className="h-full w-full pt-20 pb-16 px-24">
       {/* component: content carousel card */}
       <div className="w-full h-full relative text-white">
@@ -16,9 +48,9 @@ const HomeSection = () => {
           </div>
 
           {/* image: carousel */}
-          <div className="col-span-3 bg-green-500 relative overflow-hidden">
+          <div className="col-span-3 relative overflow-hidden">
             <img
-              className="w-full h-full object-cover rounded-tr-lg"
+              className="w-full h-full object-cover rounded-tr-3xl"
               src={placeholderImage}
             />
 
@@ -36,11 +68,12 @@ const HomeSection = () => {
           </div>
 
           {/* style: bottom black bar */}
-          <div className="col-span-5 bg-black h-16 rounded-b-2xl" />
+          <div className="col-span-5 bg-black h-16 rounded-b-3xl" />
         </div>
       </div>
     </div>
   );
+  return isMobile ? mobileView : desktopView;
 };
 
 export default HomeSection;
