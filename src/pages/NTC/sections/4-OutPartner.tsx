@@ -43,7 +43,7 @@ const OurPartnerSection = () => {
     <div className="h-full w-full">
       <div className="h-full flex flex-col">
         {/* text: title */}
-        <div className="h-1/3 flex">
+        <div className="h-[35%] flex">
           <div className="border w-full mt-auto mb-12 px-20 flex justify-between items-baseline">
             <span className="text-3xl font-bold border">OUR PARTNER</span>
             <button className="border">{"PARNERSHIP PROGRAM ->"}</button>
@@ -51,7 +51,7 @@ const OurPartnerSection = () => {
         </div>
 
         {/* component: content card */}
-        <div className="h-2/3 flex gap-6 px-20 border">
+        <div className="h-[65%] flex gap-6 px-20 border">
           <div className="flex flex-col gap-4 w-1/2 max-w-[400px]">
             {leftItems.map((item, index) => (
               <PartnerCard key={index} {...item} />
