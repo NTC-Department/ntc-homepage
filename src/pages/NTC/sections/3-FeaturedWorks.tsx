@@ -5,20 +5,28 @@ const FeaturedWorksSection = () => {
     <div className="h-full w-full">
       <div className="h-full flex flex-col">
         {/* text: title */}
-        <div className="h-72 flex">
-          <span className="text-3xl font-bold border mx-auto mt-auto mb-12">
+        <div className="h-[25%] flex">
+          <span className="text-3xl font-bold border mx-auto mt-auto mb-8">
             FEATURED WORKS
           </span>
         </div>
 
         {/* component: content card */}
-        <div className="h-full bg-black/10 flex items-center px-20 gap-4">
+        <div className="h-[60%] bg-black/10 flex items-center px-20 gap-4">
           <div className="w-1/2">
             <ImageCard />
           </div>
           <div className="w-1/2">
             <ImageCard />
           </div>
+        </div>
+
+        {/* component: footer section */}
+        <div className="h-[15%] px-20 gap-4 flex items-center justify-between">
+          <span className="font-semibold">
+            {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
+          </span>
+          <button>{"SUBMIT YOURS ->"}</button>
         </div>
       </div>
     </div>
@@ -27,7 +35,7 @@ const FeaturedWorksSection = () => {
 
 const ImageCard = () => {
   return (
-    <div className="h-[17rem] relative">
+    <div className="h-[17.5rem] relative">
       <img
         src={placeholderImage}
         className="w-full h-full object-cover rounded-lg"
@@ -35,9 +43,9 @@ const ImageCard = () => {
 
       {/* text: image description */}
       <div className="absolute bottom-0 left-0 h-24 text-white z-10 border flex">
-        <div className="w-4/5 mx-8">
-          <h3 className="text-2xl border w-fit">Title</h3>
-          <p className="text-xs border line-clamp-2">
+        <div className="w-4/5 mx-8 mt-2">
+          <h3 className="text-xl border w-fit">Title</h3>
+          <p className="text-[0.6rem] border line-clamp-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
             quaerat quisquam quidem Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nesciunt quaerat quisquam quidem
