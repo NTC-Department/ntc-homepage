@@ -2,6 +2,7 @@ import Snapper from "@components/Snapper";
 import { contentSection } from "@consts/contentSection";
 import HomeSection from "./sections/1-Home";
 import WhoAreWeSection from "./sections/2-WhoAreWe";
+import LatestReleaseSection from "./sections/3-LatestRelease";
 
 const NeogangPage = () => {
   return (
@@ -14,7 +15,7 @@ const NeogangPage = () => {
           <WhoAreWeSection />
         </Snapper.Section>
         <Snapper.Section id={contentSection.neogang.latestRelease}>
-          <h1>Partnership</h1>
+          <LatestReleaseSection />
         </Snapper.Section>
         <Snapper.Section id={contentSection.neogang.ourArtist}>
           <h1>Community</h1>
