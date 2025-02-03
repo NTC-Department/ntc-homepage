@@ -3,6 +3,7 @@ import { contentSection } from "@consts/contentSection";
 import HomeSection from "./sections/1-Home";
 import WhoAreWeSection from "./sections/2-WhoAreWe";
 import LatestReleaseSection from "./sections/3-LatestRelease";
+import OurArtistSection from "./sections/4-OurArtist";
 
 const NeogangPage = () => {
   return (
@@ -18,7 +19,7 @@ const NeogangPage = () => {
           <LatestReleaseSection />
         </Snapper.Section>
         <Snapper.Section id={contentSection.neogang.ourArtist}>
-          <h1>Community</h1>
+          <OurArtistSection />
         </Snapper.Section>
         <Snapper.Section id={contentSection.neogang.aboutUs}>
           <h1>About Us</h1>
