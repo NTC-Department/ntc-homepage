@@ -34,16 +34,18 @@ const HomeSection = () => {
   );
 
   const desktopView = (
-    <div className="h-full w-full pt-20 pb-16 px-24">
+    <div className="h-full w-full pt-40 pb-[8.5rem] px-[10.8rem]">
       {/* component: content carousel card */}
       <div className="w-full h-full relative text-white">
         <div className="grid grid-rows-[1fr_auto] grid-cols-5 h-full">
           {/* text: image description */}
-          <div className="col-span-2 bg-black flex flex-col pt-16 ps-10 pe-4 rounded-tl-3xl">
-            <h1 className="text-3xl border">TITLE</h1>
-            <p className="text-lg h-full border">Description</p>
-            <div className="h-16 border pt-2">
-              <button className="border h-full">Learn More button</button>
+          <div className="col-span-2 bg-black flex flex-col pt-40 ps-18 pe-4 rounded-tl-3xl">
+            <h1 className="text-3xl border h-20">TITLE</h1>
+            <p className="text-lg border mt-16 h-[9.5rem]">Description</p>
+            <div className="h-14 mt-30">
+              <button className="border h-full w-[18.5rem] rounded-2xl">
+                Learn More button
+              </button>
             </div>
           </div>
 
@@ -61,9 +63,13 @@ const HomeSection = () => {
             {/* style: black gradient that mask images (bottom) */}
             <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
 
-            <div className="absolute bottom-3 right-6">
-              <div className="border">Carousel Button</div>
+            <div className="absolute bottom-20 right-16 w-[8.5rem] h-[2.3rem] flex border gap-1 justify-center items-center">
+              <div className="border rounded-full w-8 h-8 " />
+              <div className="border rounded-full w-8 h-8 bg-white" />
+              <div className="border rounded-full w-8 h-8" />
+              <div className="border rounded-full w-8 h-8" />
             </div>
           </div>
 

@@ -6,26 +6,28 @@ const JoinUsSection = () => {
     <div className="h-full w-full">
       <div className="h-full flex flex-col">
         {/* text: title */}
-        <div className="h-[35%] flex">
-          <div className="border w-full mt-auto mb-12 px-20">
-            <span className="text-3xl font-bold border">JOIN US!</span>
+        <div className="h-[35%] px-44 flex">
+          <div className="w-full mt-auto pb-24 flex">
+            <span className="text-[3rem] font-bold border h-20 w-[36rem]">
+              JOIN US!
+            </span>
           </div>
         </div>
 
         {/* component: community card */}
-        <div className="h-[45%] flex gap-3 px-20 border">
+        <div className="h-[45%] flex gap-8 px-44 border">
           <CommunityCard />
           <CommunityCard />
         </div>
 
         {/* component: divider */}
-        <div className="h-[7%] gap-3 px-20 flex">
+        <div className="h-[7%] gap-3 px-44 flex">
           <hr className="border w-full mt-auto" />
         </div>
 
         {/* component: footer section */}
-        <div className="h-[13%] px-20 flex items-center">
-          <span className="font-semibold border h-fit">
+        <div className="h-[13%] px-44 flex items-center">
+          <span className="font-semibold border h-fit text-2xl">
             {`2021 - ${moment.utc().format("YYYY")} © NTC DEPARTMENT, ALL RIGHTS RESERVED`}
           </span>
         </div>
@@ -36,17 +38,17 @@ const JoinUsSection = () => {
 
 const CommunityCard = () => {
   return (
-    <div className="h-full relative">
+    <div className="h-full w-full relative">
       <img
         src={placeholderImage}
         className="w-full h-full object-cover rounded-lg"
       />
 
       {/* text: image description */}
-      <div className="absolute bottom-0 left-0 h-24 text-white z-10 border flex">
+      <div className="absolute bottom-0 left-0 h-28 text-white z-10 border flex">
         <div className="w-4/5 mx-8 mt-2">
-          <h3 className="text-xl border w-fit">Title</h3>
-          <p className="text-[0.6rem] border line-clamp-2">
+          <h3 className="text-3xl border w-fit">Title</h3>
+          <p className="text-sm border line-clamp-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
             quaerat quisquam quidem Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nesciunt quaerat quisquam quidem

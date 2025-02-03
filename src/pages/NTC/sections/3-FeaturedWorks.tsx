@@ -5,28 +5,28 @@ const FeaturedWorksSection = () => {
     <div className="h-full w-full">
       <div className="h-full flex flex-col">
         {/* text: title */}
-        <div className="h-[25%] flex">
-          <span className="text-3xl font-bold border mx-auto mt-auto mb-8">
+        <div className="h-[30%] flex">
+          <span className="text-[3rem] font-bold border mx-auto mt-auto mb-20 h-20 w-[36rem]">
             FEATURED WORKS
           </span>
         </div>
 
         {/* component: content card */}
-        <div className="h-[60%] bg-black/10 flex items-center px-20 gap-4">
-          <div className="w-1/2">
+        <div className="h-[55%] bg-black/10 gap-4">
+          <div className="flex border items-center px-44 mt-14 h-[30rem] gap-8">
             <ImageCard />
-          </div>
-          <div className="w-1/2">
             <ImageCard />
           </div>
         </div>
 
         {/* component: footer section */}
-        <div className="h-[15%] px-20 gap-4 flex items-center justify-between">
-          <span className="font-semibold border">
+        <div className="h-[15%] px-44 gap-4 flex items-center justify-between">
+          <span className="font-semibold border h-10 text-2xl">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </span>
-          <button className="border">{"SUBMIT YOURS ->"}</button>
+          <button className="border w-56 text-2xl text-end">
+            {"SUBMIT YOURS ->"}
+          </button>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@ const FeaturedWorksSection = () => {
 
 const ImageCard = () => {
   return (
-    <div className="h-[17.5rem] relative">
+    <div className="h-full w-full relative">
       <img
         src={placeholderImage}
         className="w-full h-full object-cover rounded-lg"

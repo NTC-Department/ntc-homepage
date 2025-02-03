@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div
       className={clsx(
-        "primary fixed z-10 w-full backdrop-blur-md h-[3.5rem] bg-black text-white",
+        "primary fixed z-50 w-full backdrop-blur-md h-24 bg-black text-white",
         isFirstSection ? "animate-firstSection" : "animate-onSection"
       )}
     >
