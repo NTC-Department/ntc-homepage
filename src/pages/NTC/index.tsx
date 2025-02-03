@@ -13,7 +13,7 @@ const NTCPage = () => {
         <Snapper.Section id={sections.home}>
           <HomeSection />
         </Snapper.Section>
-        <Snapper.Section id={sections.shop}>
+        <Snapper.Section id={sections.shop} primaryColor="black">
           <WhoAreWeSection />
         </Snapper.Section>
         <Snapper.Section id={sections.partnership}>

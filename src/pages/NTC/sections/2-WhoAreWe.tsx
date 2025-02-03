@@ -16,23 +16,43 @@ const WhoAreWeSection = () => {
         </div>
 
         {/* image: showcase 8 grid */}
-        <div className="w-1/2 border overflow-hidden relative px-20">
-          <div className="grid grid-cols-2 grid-rows-4 gap-4 h-full">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div
-                key={index}
-                className={clsx(
-                  "w-full h-32 bg-gray-300 flex items-center justify-center overflow-hidden rounded-lg",
-                  index % 2 === 0 ? "translate-y-4" : "-translate-y-4",
-                  index === 2 || index === 5 ? "" : "opacity-60"
-                )}
-              >
-                <img
-                  src={placeholderImage}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
+        <div className="w-1/2 border overflow-hidden relative px-20 flex justify-center">
+          <div className="flex gap-4">
+            {/* imagelist: left */}
+            <div className="flex flex-col gap-4 -mt-6 mb-6">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div
+                  key={index}
+                  className={clsx(
+                    "w-32 h-32 bg-gray-300 flex items-center justify-center overflow-hidden rounded-lg opacity-60",
+                    index === 2 && "opacity-100"
+                  )}
+                >
+                  <img
+                    src={placeholderImage}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* imagelist: right */}
+            <div className="flex flex-col gap-4 mt-6 -mb-6">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div
+                  key={index + 4}
+                  className={clsx(
+                    "w-32 h-32 bg-gray-300 flex items-center justify-center overflow-hidden rounded-lg opacity-60",
+                    index === 1 && "opacity-100"
+                  )}
+                >
+                  <img
+                    src={placeholderImage}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
