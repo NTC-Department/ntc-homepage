@@ -23,10 +23,10 @@ const FeaturedWorksSection = () => {
 
         {/* component: footer section */}
         <div className="h-[15%] px-20 gap-4 flex items-center justify-between">
-          <span className="font-semibold">
+          <span className="font-semibold border">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </span>
-          <button>{"SUBMIT YOURS ->"}</button>
+          <button className="border">{"SUBMIT YOURS ->"}</button>
         </div>
       </div>
     </div>

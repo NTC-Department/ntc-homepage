@@ -78,9 +78,9 @@ type Partner = {
 
 const PartnerCard = (props: Partner) => {
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center border">
       <img src={props.image} className="w-14 h-14 rounded-md object-cover" />
-      <span className="font-semibold">{props.name}</span>
+      <span className="font-semibold line-clamp-2">{props.name}</span>
     </div>
   );
 };
