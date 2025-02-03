@@ -1,3 +1,4 @@
+// TODO: separated content section and navbar item
 export const contentSection = Object.freeze({
   ntc: {
     home: "Home",

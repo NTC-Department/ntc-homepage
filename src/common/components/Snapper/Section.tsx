@@ -8,11 +8,17 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   isCentered?: boolean;
-  primaryColor: "white" | "black";
+  primaryColor?: "white" | "black";
 }
 
 const Section = (props: Props) => {
-  const { id, children, className, isCentered = true, primaryColor } = props;
+  const {
+    id,
+    children,
+    className,
+    isCentered = true,
+    primaryColor = "white",
+  } = props;
 
   const { onSectionChange } = useSection();
   const { ref, inView } = useInView({

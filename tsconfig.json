@@ -27,7 +27,8 @@
       "@types": ["./src/common/types/index.ts"],
       "@utils/*": ["./src/common/utils/*"],
       "@contexts/*": ["./src/contexts/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@assets/*": ["./src/assets/*"]
     },
     "typeRoots": ["./node_modules/@types"]
   },
