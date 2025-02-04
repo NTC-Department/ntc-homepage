@@ -33,3 +33,15 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.debug1 {
+  border: 1px solid red;
+}
+
+.debug2 {
+  border: 1px solid blue;
+}
+
+.debug3 {
+  border: 1px solid green;
+}

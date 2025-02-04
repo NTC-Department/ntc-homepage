@@ -19,16 +19,21 @@ export default function App() {
 
 function BaseLayout() {
   useTrackWebContent();
-
   return (
-    <>
+    <div className="min-h-screen flex flex-col w-screen overflow-x-hidden">
       <header>
-        <Navbar />
+        <div className="w-screen">
+          <Navbar />
+        </div>
       </header>
-      <main>
-        <Outlet />
+      <main className="flex-grow">
+        <div className="w-screen">
+          <Outlet />
+        </div>
       </main>
-      <footer>{/* <Footer /> */}</footer>
-    </>
+      <footer>
+        <div className="w-screen">{/* <Footer /> */}</div>
+      </footer>
+    </div>
   );
 }
