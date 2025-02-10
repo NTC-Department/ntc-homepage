@@ -1,4 +1,6 @@
 import placeholderImage from "@assets/content/placeholder.jpg";
+import { movingArrow } from "@classStyle/hover";
+import clsx from "clsx";
 import { FaImage } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -27,9 +29,9 @@ const FeaturedWorksSection = () => {
           <span className="font-semibold text-2xl">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </span>
-          <button className="text-2xl text-end flex gap-3 items-center cursor-pointer">
+          <button className="flex gap-3 items-center cursor-pointer group">
             <span className="text-2xl">SUBMIT YOURS</span>
-            <FaArrowRight className="w-5 h-5 mt-0.5" />
+            <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
           </button>
         </div>
       </div>
@@ -61,8 +63,8 @@ const ImageCard = () => {
 
         {/* button: arrow right > redirect to content */}
         <div className="w-1/5 flex items-center justify-center">
-          <button className="group py-2 px-4 hover:transform hover:translate-x-1 transition-all duration-200 cursor-pointer">
-            <FaArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-all duration-200" />
+          <button className="group py-2 px-4 cursor-pointer">
+            <FaArrowRight className={clsx("w-5 h-5", movingArrow)} />
           </button>
         </div>
       </div>
