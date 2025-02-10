@@ -1,34 +1,41 @@
 import placeholderImage from "@assets/content/placeholder.jpg";
+import { FaImage } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 const FeaturedWorksSection = () => {
   return (
-    <div className="h-full w-full">
-      <div className="h-full flex flex-col">
+    <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+      <div className="w-full max-w-[100rem] h-full flex flex-col">
         {/* text: title */}
-        <div className="h-[30%] flex">
-          <span className="text-[3rem] font-bold border mx-auto mt-auto mb-20 h-20 w-[36rem]">
-            FEATURED WORKS
-          </span>
+        <div className="h-[28%] flex">
+          <div className="mx-auto mt-auto mb-12 h-20 w-[36rem] flex items-center gap-4 justify-center">
+            <FaImage className="w-12 h-12" />
+            <span className="text-[3rem] font-bold">FEATURED WORKS</span>
+          </div>
         </div>
 
         {/* component: content card */}
-        <div className="h-[55%] bg-black/10 gap-4">
-          <div className="flex border items-center px-44 mt-14 h-[30rem] gap-8">
+        <div className="h-[57%] gap-4 relative">
+          <div className="flex items-center mt-10 h-[30rem] gap-8">
             <ImageCard />
             <ImageCard />
           </div>
         </div>
 
         {/* component: footer section */}
-        <div className="h-[15%] px-44 gap-4 flex items-center justify-between">
-          <span className="font-semibold border h-10 text-2xl">
+        <div className="h-[15%] gap-4 flex items-center justify-between">
+          <span className="font-semibold text-2xl">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </span>
-          <button className="border w-56 text-2xl text-end">
-            {"SUBMIT YOURS ->"}
+          <button className="text-2xl text-end flex gap-3 items-center cursor-pointer">
+            <span className="text-2xl">SUBMIT YOURS</span>
+            <FaArrowRight className="w-5 h-5 mt-0.5" />
           </button>
         </div>
       </div>
+
+      {/* style: gray banner */}
+      <div className="bg-black/10 h-[35rem] w-full absolute top-[28vh]" />
     </div>
   );
 };
@@ -42,10 +49,10 @@ const ImageCard = () => {
       />
 
       {/* text: image description */}
-      <div className="absolute bottom-0 left-0 h-24 text-white z-10 border flex">
+      <div className="absolute bottom-0 left-0 h-24 text-white z-10 flex">
         <div className="w-4/5 mx-8 mt-2">
-          <h3 className="text-xl border w-fit">Title</h3>
-          <p className="text-[0.6rem] border line-clamp-2">
+          <h3 className="text-[1.4rem] w-fit">Title</h3>
+          <p className="text-[0.7rem] line-clamp-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
             quaerat quisquam quidem Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nesciunt quaerat quisquam quidem
@@ -53,8 +60,10 @@ const ImageCard = () => {
         </div>
 
         {/* button: arrow right > redirect to content */}
-        <div className="w-1/5 border flex items-center justify-center">
-          <button className="text-3xl border">{"->"}</button>
+        <div className="w-1/5 flex items-center justify-center">
+          <button className="group py-2 px-4 hover:transform hover:translate-x-1 transition-all duration-200 cursor-pointer">
+            <FaArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-all duration-200" />
+          </button>
         </div>
       </div>
 
@@ -62,6 +71,7 @@ const ImageCard = () => {
       <div className="absolute bottom-4 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg" />
       <div className="absolute bottom-4 left-0 w-full h-1/2 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/95 to-transparent rounded-b-lg" />
+      <div className="absolute bottom-0 left-0 w-full h-5 bg-black rounded-b-lg" />
     </div>
   );
 };
