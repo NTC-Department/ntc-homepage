@@ -8,25 +8,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const WhoAreWeSection = () => {
-  const images = [nindy1, nindy2, nindy3, nindy4, nindy5];
-  const shuffledImages = (images: string[]) => {
-    return images
-      .map((image) => ({ image, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ image }) => image);
-  };
+  const imagesA = [nindy1, nindy2, nindy3, nindy4, nindy5];
+  const imagesB = [nindy3, nindy4, nindy5, nindy2, nindy1];
 
-  const imageListLeft = [
-    ...shuffledImages(images),
-    ...shuffledImages(images),
-    ...shuffledImages(images),
-  ];
+  const imageListLeft = [...imagesA, ...imagesA, ...imagesA];
 
-  const imageListRight = [
-    ...shuffledImages(images),
-    ...shuffledImages(images),
-    ...shuffledImages(images),
-  ];
+  const imageListRight = [...imagesB, ...imagesB, ...imagesB];
 
   const animationFrameLeft = [
     {
@@ -41,21 +28,21 @@ const WhoAreWeSection = () => {
       animate: { y: "-76%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
     {
       initial: { y: "-76%" },
       animate: { y: "-37%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
     {
       initial: { y: "-37%" },
       animate: { y: "-7%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
   ];
 
@@ -72,21 +59,21 @@ const WhoAreWeSection = () => {
       animate: { y: "-20%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
     {
       initial: { y: "-20%" },
       animate: { y: "-74%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
     {
       initial: { y: "-74%" },
       animate: { y: "-10%" },
       duration: 1.2,
       ease: [0, 0, 0.6, 1.2],
-      delay: 3.7,
+      delay: 3,
     },
   ];
 
@@ -115,7 +102,6 @@ const WhoAreWeSection = () => {
         <div className="w-[40rem] relative flex justify-between">
           <ImageList
             key={1}
-            isLeft={true}
             images={imageListLeft}
             frameAnimation={animationFrameLeft}
           />
@@ -133,26 +119,19 @@ const WhoAreWeSection = () => {
 const ImageList = ({
   images,
   frameAnimation,
-  isLeft,
 }: {
   images: string[];
   frameAnimation: FrameAnimation[];
-  isLeft?: boolean;
 }) => {
   const controls = useAnimation();
   const [highlightIndex, setHighlightIndex] = useState(-1);
 
   const runAnimation = async () => {
-    let isFirstCycle = false;
     while (true) {
       for (const frame of frameAnimation) {
         const percentage = Number(frame.initial.y.slice(0, -1).slice(1));
         const imageIndex = Math.floor((percentage / 100) * images.length);
         setHighlightIndex(imageIndex + 1);
-
-        if (isFirstCycle && isLeft) {
-          await new Promise((resolve) => setTimeout(resolve, 2500));
-        }
 
         await controls.start({
           y: frame.animate.y,
@@ -162,7 +141,6 @@ const ImageList = ({
             delay: frame.delay,
           },
         });
-        isFirstCycle = !isFirstCycle;
       }
 
       const percentage = Number(
@@ -171,7 +149,7 @@ const ImageList = ({
       const imageIndex = Math.floor((percentage / 100) * images.length);
       setHighlightIndex(imageIndex + 1);
 
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       await controls.start({
         y: frameAnimation[0].initial.y,
         transition: { duration: 0 },
