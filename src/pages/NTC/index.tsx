@@ -4,7 +4,7 @@ import { contentSection } from "@consts/contentSection";
 import HomeSection from "./sections/1-Home";
 import WhoAreWeSection from "./sections/2-WhoAreWe";
 import FeaturedWorksSection from "./sections/3-FeaturedWorks";
-import OurPartnerSection from "./sections/4-OutPartner";
+import OurPartnerSection from "./sections/4-OurPartner";
 import JoinUsSection from "./sections/5-JoinUs";
 
 const NTCPage = () => {
