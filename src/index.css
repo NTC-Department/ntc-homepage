@@ -1,28 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --animate-firstSection: firstSection 0.5s forwards;
-  --animate-onSection: onSection 0.5s forwards;
-
-  @keyframes firstSection {
-    0% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes onSection {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.8;
-    }
-  }
-}
-
 * {
   box-sizing: border-box;
   text-decoration: none;
