@@ -3,6 +3,9 @@ import cardImage from "@assets/content/NTC/sections/1-Home/card-image.png";
 import background1 from "@assets/content/NTC/sections/1-Home/background-1.png";
 import background2 from "@assets/content/NTC/sections/1-Home/background-2.png";
 import background3 from "@assets/content/NTC/sections/1-Home/background-3.png";
+import { FaArrowRight } from "react-icons/fa";
+import clsx from "clsx";
+import { movingArrow } from "@classStyle/hover";
 
 const backgrounds = [background1, background2, background3];
 
@@ -17,9 +20,9 @@ const HomeSection = () => {
         for (let i = 0; i < backgrounds.length; i++) {
           if (!isMounted) return;
           setCurrentBackground(i);
-          await new Promise((resolve) => setTimeout(resolve, 80));
+          await new Promise((resolve) => setTimeout(resolve, 70));
         }
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
       }
     };
 
@@ -45,11 +48,25 @@ const HomeSection = () => {
         <div className="grid grid-rows-[1fr_auto] grid-cols-5 h-full">
           {/* text: image description */}
           <div className="col-span-2 bg-black flex flex-col pt-40 ps-18 pe-4 rounded-tl-3xl">
-            <h1 className="text-3xl border h-20">TITLE</h1>
-            <p className="text-lg border mt-16 h-[9.5rem]">Description</p>
-            <div className="h-14 mt-30">
-              <button className="border h-full w-[18.5rem] rounded-2xl">
-                Learn More button
+            <h1 className="text-[4rem] h-20 font-schabo-condensed">NEOGANG</h1>
+            <span className="text-lg mt-12 h-[10rem] font-helvetica-neue-roman">
+              <p>
+                Pushing Creativity Boundaries through Innovative Music and
+                Visual! we commit to push the limits, blend any genres, break
+                any barriers, and inspire others.
+              </p>
+              <br />
+              <p>
+                Neogang / Neoteric HQ are Creative Team <br />
+                based in Indonesia.
+              </p>
+            </span>
+            <div className="h-14 mt-28">
+              <button className="border h-full w-[18.5rem] rounded-2xl flex items-center justify-center gap-2 group bg-white text-black cursor-pointer">
+                <span className="font-helvetica-neue-medium text-[1.65rem]">
+                  Learn More
+                </span>
+                <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
               </button>
             </div>
           </div>
