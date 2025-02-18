@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./custom-fonts.css";
+@import "./custom-theme.css";
 
 * {
   box-sizing: border-box;
