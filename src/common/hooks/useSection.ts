@@ -21,7 +21,7 @@ const useSection = (): HookReturn => {
     setSection(section);
   };
 
-  const isFirstSection = currentSection === "home";
+  const isFirstSection = currentSection === "Home";
 
   return {
     isFirstSection,
