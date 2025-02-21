@@ -61,7 +61,7 @@ const CommunityCard = () => {
 
         {/* button: arrow right > redirect to content */}
         <div className="w-1/5 flex items-center justify-center">
-          <button className="group py-2 px-4 cursor-pointer">
+          <button className="group py-2 px-4">
             <FaArrowRight className={clsx("w-5 h-5", movingArrow)} />
           </button>
         </div>

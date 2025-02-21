@@ -62,7 +62,7 @@ const HomeSection = () => {
               </p>
             </div>
             <div className="h-14 mt-28">
-              <button className="border h-full w-[18.5rem] rounded-2xl flex items-center justify-center gap-2 group bg-white text-black cursor-pointer">
+              <button className="border h-full w-[18.5rem] rounded-2xl flex items-center justify-center gap-2 group bg-white text-black">
                 <span className="font-helvetica-neue-medium text-[1.65rem]">
                   Learn More
                 </span>

@@ -29,7 +29,7 @@ const FeaturedWorksSection = () => {
           <h4 className="font-semibold text-2xl">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </h4>
-          <button className="flex gap-3 items-center cursor-pointer group">
+          <button className="flex gap-3 items-center group">
             <span className="text-2xl">SUBMIT YOURS</span>
             <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
           </button>
@@ -63,7 +63,7 @@ const ImageCard = () => {
 
         {/* button: arrow right > redirect to content */}
         <div className="w-1/5 flex items-center justify-center">
-          <button className="group py-2 px-4 cursor-pointer">
+          <button className="group py-2 px-4">
             <FaArrowRight className={clsx("w-5 h-5", movingArrow)} />
           </button>
         </div>

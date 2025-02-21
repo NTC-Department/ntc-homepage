@@ -100,7 +100,7 @@ const WhoAreWeSection = () => {
             </p>
           </div>
           <div className="mt-[7.5rem] h-16 w-62">
-            <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group cursor-pointer">
+            <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group">
               <span className="font-helvetica-neue-medium text-[1.65rem]">
                 About Us
               </span>

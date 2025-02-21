@@ -52,7 +52,7 @@ const OurPartnerSection = () => {
         <div className="h-[28%] flex">
           <div className="w-full mt-auto mb-6 h-20 flex justify-between items-baseline">
             <h1 className="text-[3rem] font-bold w-[36rem]">OUR PARTNER</h1>
-            <button className="flex gap-3 items-center cursor-pointer group">
+            <button className="flex gap-3 items-center group">
               <span className="text-2xl">PARNERSHIP PROGRAM</span>
               <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
             </button>
@@ -99,7 +99,7 @@ const PartnerCard = (props: Partner) => {
       <span className="font-semibold line-clamp-2 text-xl">{props.name}</span>
 
       {/* Animated Arrow Button (Now appears on hover) */}
-      <button className="p-2 me-1 cursor-pointer opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ms-auto">
+      <button className="p-2 me-1 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ms-auto">
         <FaChevronRight className="w-5 h-5" />
       </button>
 

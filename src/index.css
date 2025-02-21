@@ -13,6 +13,10 @@
   min-width: 100vw;
 }
 
+button {
+  cursor: pointer;
+}
+
 .debug1 {
   border: 1px solid red;
 }
