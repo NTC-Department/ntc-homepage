@@ -4,21 +4,23 @@
   --animate-firstSection: firstSection 0.5s forwards;
   --animate-onSection: onSection 0.5s forwards;
 
-  @keyframes firstSection {
-    0% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  --color-primary: #c8fe0c;
+}
 
-  @keyframes onSection {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.8;
-    }
+@keyframes firstSection {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes onSection {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
   }
 }

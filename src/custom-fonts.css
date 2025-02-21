@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --font-schabo-condensed: "schabo-condensed";
+
+  --font-helvetica-neue-bold: "helvetica-neue-bold";
+  --font-helvetica-neue-medium: "helvetica-neue-medium";
+  --font-helvetica-neue-roman: "helvetica-neue-roman";
+}
+
 @font-face {
   font-family: "schabo-condensed";
   src: url(/fonts/schabo-condensed/regular.otf) format("opentype");
@@ -16,20 +24,4 @@
 @font-face {
   font-family: "helvetica-neue-roman";
   src: url(/fonts/helvetica-neue/roman.otf) format("opentype");
-}
-
-@layer utilities {
-  .font-schabo-condensed {
-    font-family: "schabo-condensed";
-  }
-
-  .font-helvetica-neue-bold {
-    font-family: "helvetica-neue-bold";
-  }
-  .font-helvetica-neue-medium {
-    font-family: "helvetica-neue-medium";
-  }
-  .font-helvetica-neue-roman {
-    font-family: "helvetica-neue-roman";
-  }
 }
