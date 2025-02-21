@@ -51,7 +51,7 @@ const OurPartnerSection = () => {
 
         <div className="h-[28%] flex">
           <div className="w-full mt-auto mb-6 h-20 flex justify-between items-baseline">
-            <span className="text-[3rem] font-bold w-[36rem]">OUR PARTNER</span>
+            <h1 className="text-[3rem] font-bold w-[36rem]">OUR PARTNER</h1>
             <button className="flex gap-3 items-center cursor-pointer group">
               <span className="text-2xl">PARNERSHIP PROGRAM</span>
               <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />

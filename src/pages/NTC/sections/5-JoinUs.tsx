@@ -11,9 +11,7 @@ const JoinUsSection = () => {
         {/* text: title */}
         <div className="h-[28%] flex">
           <div className="w-full mt-auto mb-12 flex">
-            <span className="text-[3rem] font-bold h-20 w-[36rem]">
-              JOIN US!
-            </span>
+            <h1 className="text-[3rem] font-bold h-20 w-[36rem]">JOIN US!</h1>
           </div>
         </div>
 
@@ -33,9 +31,9 @@ const JoinUsSection = () => {
 
         {/* component: footer section */}
         <div className="h-[12%] flex items-center">
-          <span className="font-semibold h-fit text-xl">
+          <h4 className="font-semibold h-fit text-xl">
             {`2021 - ${moment.utc().format("YYYY")} © NTC DEPARTMENT, ALL RIGHTS RESERVED`}
-          </span>
+          </h4>
         </div>
       </div>
     </div>

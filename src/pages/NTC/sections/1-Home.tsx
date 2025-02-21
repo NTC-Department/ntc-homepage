@@ -49,7 +49,7 @@ const HomeSection = () => {
           {/* text: image description */}
           <div className="col-span-2 bg-black flex flex-col pt-40 ps-18 pe-4 rounded-tl-3xl">
             <h1 className="text-[4rem] h-20 font-schabo-condensed">NEOGANG</h1>
-            <span className="text-lg mt-12 h-[10rem] font-helvetica-neue-roman">
+            <div className="text-lg mt-12 h-[10rem] font-helvetica-neue-roman">
               <p>
                 Pushing Creativity Boundaries through Innovative Music and
                 Visual! we commit to push the limits, blend any genres, break
@@ -60,7 +60,7 @@ const HomeSection = () => {
                 Neogang / Neoteric HQ are Creative Team <br />
                 based in Indonesia.
               </p>
-            </span>
+            </div>
             <div className="h-14 mt-28">
               <button className="border h-full w-[18.5rem] rounded-2xl flex items-center justify-center gap-2 group bg-white text-black cursor-pointer">
                 <span className="font-helvetica-neue-medium text-[1.65rem]">

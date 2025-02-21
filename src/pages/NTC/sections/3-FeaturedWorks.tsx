@@ -12,7 +12,7 @@ const FeaturedWorksSection = () => {
         <div className="h-[28%] flex">
           <div className="mx-auto mt-auto mb-12 h-20 w-[36rem] flex items-center gap-4 justify-center">
             <FaImage className="w-12 h-12" />
-            <span className="text-[3rem] font-bold">FEATURED WORKS</span>
+            <h1 className="text-[3rem] font-bold">FEATURED WORKS</h1>
           </div>
         </div>
 
@@ -26,9 +26,9 @@ const FeaturedWorksSection = () => {
 
         {/* component: footer section */}
         <div className="h-[15%] gap-4 flex items-center justify-between">
-          <span className="font-semibold text-2xl">
+          <h4 className="font-semibold text-2xl">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
-          </span>
+          </h4>
           <button className="flex gap-3 items-center cursor-pointer group">
             <span className="text-2xl">SUBMIT YOURS</span>
             <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />

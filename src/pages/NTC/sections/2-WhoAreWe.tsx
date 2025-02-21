@@ -91,14 +91,14 @@ const WhoAreWeSection = () => {
           <h1 className="text-[4rem] mt-24 h-20 w-fit font-schabo-condensed">
             WHO ARE WE?
           </h1>
-          <span className="font-helvetica-neue-roman">
+          <div className="font-helvetica-neue-roman">
             <p className="mt-14 h-28 line-clamp-4 max-w-[30rem]">
               Create, Inspire, Innovate. NTC Deparment is a dynamic creative
               community specializing in gaming, and pop culture content with a
               talented team of designers, editors, and creators, we bring ideas
               to life through visuals.
             </p>
-          </span>
+          </div>
           <div className="mt-[7.5rem] h-16 w-62">
             <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group cursor-pointer">
               <span className="font-helvetica-neue-medium text-[1.65rem]">
