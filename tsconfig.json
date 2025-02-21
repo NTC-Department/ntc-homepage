@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
+      "@public/*": ["./public/*"],
       "@classStyle/*": ["./src/common/classStyle/*"],
       "@components/*": ["./src/common/components/*"],
       "@consts/*": ["./src/common/consts/*"],

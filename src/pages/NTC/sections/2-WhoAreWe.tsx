@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import NTCLogo from "@public/images/NTCLogo.png";
 import nindy1 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-1.jpg";
 import nindy2 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-2.jpg";
 import nindy3 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-3.jpg";
@@ -6,6 +7,8 @@ import nindy4 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-4.jpg";
 import nindy5 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-5.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { movingArrow } from "@classStyle/hover";
 
 const WhoAreWeSection = () => {
   const imagesA = [nindy1, nindy2, nindy3, nindy4, nindy5];
@@ -81,20 +84,27 @@ const WhoAreWeSection = () => {
     <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
       <div className="w-full max-w-[100rem] flex gap-5 justify-center">
         {/* component: who are we */}
-        <div className="w-full max-w-[50rem] h-[45rem] my-auto border flex grow flex-col ps-4">
-          <div className="border h-18 w-60">LOGO</div>
-          <h1 className="text-3xl border mt-32 h-20 w-[22.5rem]">
+        <div className="w-full max-w-[50rem] h-[45rem] my-auto flex grow flex-col ps-4">
+          <div className="h-18 w-60 mt-10">
+            <img className="m-auto" src={NTCLogo} alt="Logo NTC" />
+          </div>
+          <h1 className="text-[4rem] mt-24 h-20 w-fit font-schabo-condensed">
             WHO ARE WE?
           </h1>
-          <p className="border mt-14 h-28 line-clamp-4 max-w-[35rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            suscipit eligendi totam veritatis dignissimos voluptatibus, aliquam
-            nisi. Placeat maxime minima libero sed, officia totam odio! Deleniti
-            nam nesciunt harum quas quidem, voluptates, quos, quae.
-          </p>
+          <span className="font-helvetica-neue-roman">
+            <p className="mt-14 h-28 line-clamp-4 max-w-[30rem]">
+              Create, Inspire, Innovate. NTC Deparment is a dynamic creative
+              community specializing in gaming, and pop culture content with a
+              talented team of designers, editors, and creators, we bring ideas
+              to life through visuals.
+            </p>
+          </span>
           <div className="mt-[7.5rem] h-16 w-62">
-            <button className="h-full border w-full rounded-2xl">
-              About Us button
+            <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group cursor-pointer">
+              <span className="font-helvetica-neue-medium text-[1.65rem]">
+                About Us
+              </span>
+              <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
             </button>
           </div>
         </div>
