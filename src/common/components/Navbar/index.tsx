@@ -1,5 +1,6 @@
-import useCoreStore from "@contexts/core/store";
 import clsx from "clsx";
+import NTCLogo from "@public/images/NTCLogo.png";
+import useCoreStore from "@contexts/core/store";
 import useWebContent from "@hooks/useWebContent";
 import useSection from "@hooks/useSection";
 import { contentSection } from "@consts/contentSection";
@@ -12,42 +13,38 @@ const Navbar = () => {
   return (
     <div
       className={clsx(
-        "primary fixed z-50 w-full backdrop-blur-md h-24 bg-black text-white",
+        "fixed z-50 w-full backdrop-blur-md h-24 bg-black text-white px-44 flex items-center justify-between",
         isFirstSection ? "animate-firstSection" : "animate-onSection"
       )}
     >
-      <div className="flex h-full items-center justify-between">
-        <div className="flex gap-2">
-          {Object.values(contentSection[currentContent]).map((item, index) => (
+      <nav className="flex gap-4">
+        {/* component: NTC logo */}
+        <img
+          src={NTCLogo}
+          alt="Logo NTC"
+          onClick={() => scrollToSection("Home")}
+          className="h-7 me-8 cursor-pointer"
+        />
+
+        {/* components: navigation items */}
+        {Object.values(contentSection[currentContent])
+          .slice(1)
+          .map((item, index) => (
             <button
               key={index}
               onClick={() => scrollToSection(item)}
-              className="primary hover:bg-white hover:text-black"
+              className="font-helvetica-neue-roman"
             >
-              {item === "Home" ? (
-                <div>
-                  <span>LOGO</span>
-                </div>
-              ) : (
-                <div>
-                  <span>{item}</span>
-                </div>
-              )}
+              {item}
             </button>
           ))}
-        </div>
-        <div className="flex gap-2">
-          <button
-            onClick={switchWebContent}
-            className="primary hover:bg-white hover:text-black rounded-md"
-          >
-            {currentContent}
-          </button>
-          <button className="primary hover:bg-white hover:text-black">
-            LOGIN
-          </button>
-        </div>
-      </div>
+      </nav>
+      <button
+        onClick={switchWebContent}
+        className="text-lg rounded-md p-1 px-3 capitalize text-primary font-helvetica-neue-bold"
+      >
+        {currentContent === "ntc" ? "Neogang" : "NTC"}
+      </button>
     </div>
   );
 };
