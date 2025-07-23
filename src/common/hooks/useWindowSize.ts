@@ -14,10 +14,7 @@ interface HookReturn {
   isMobile: boolean;
 }
 const useWindowSize = (): HookReturn => {
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  const [windowSize, setWindowSize] = useState([window.innerWidth, window.innerHeight]);
 
   useEffect(() => {
     const handleWindowResize = () => {

@@ -10,10 +10,9 @@ const WhoAreWeSection = () => {
           <div className="border h-20 w-32">LOGO</div>
           <h1 className="text-3xl border mt-16">WHO ARE WE?</h1>
           <p className="h-full border mt-8 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            suscipit eligendi totam veritatis dignissimos voluptatibus, aliquam
-            nisi. Placeat maxime minima libero sed, officia totam odio! Deleniti
-            nam nesciunt harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit eligendi totam veritatis
+            dignissimos voluptatibus, aliquam nisi. Placeat maxime minima libero sed, officia totam odio! Deleniti nam
+            nesciunt harum.
           </p>
           <div className="h-28 border">
             <button className="h-full border">About Us button</button>
@@ -32,10 +31,7 @@ const WhoAreWeSection = () => {
                   index === 2 && "opacity-100"
                 )}
               >
-                <img
-                  src={placeholderImage}
-                  className="w-full h-full object-cover"
-                />
+                <img src={placeholderImage} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -50,10 +46,7 @@ const WhoAreWeSection = () => {
                   index === 1 && "opacity-100"
                 )}
               >
-                <img
-                  src={placeholderImage}
-                  className="w-full h-full object-cover"
-                />
+                <img src={placeholderImage} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

@@ -1,8 +1,4 @@
-import {
-  AxiosInstance,
-  AxiosResponse,
-  InternalAxiosRequestConfig,
-} from "axios";
+import { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from "axios";
 
 const exampleReqInterceptors = (config: InternalAxiosRequestConfig) => {
   const example = localStorage.getItem("example");

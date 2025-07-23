@@ -21,13 +21,7 @@ const Container = (props: Props) => {
   }, []);
 
   return (
-    <main
-      ref={mainRef}
-      className={clsx(
-        "h-screen overflow-y-auto snap-y snap-mandatory",
-        className
-      )}
-    >
+    <main ref={mainRef} className={clsx("h-screen overflow-y-auto snap-y snap-mandatory", className)}>
       {children}
     </main>
   );

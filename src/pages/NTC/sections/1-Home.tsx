@@ -51,9 +51,8 @@ const HomeSection = () => {
             <h1 className="text-[4rem] h-20 font-schabo-condensed">NEOGANG</h1>
             <div className="text-lg mt-12 h-[10rem] font-helvetica-neue-roman">
               <p>
-                Pushing Creativity Boundaries through Innovative Music and
-                Visual! we commit to push the limits, blend any genres, break
-                any barriers, and inspire others.
+                Pushing Creativity Boundaries through Innovative Music and Visual! we commit to push the limits, blend
+                any genres, break any barriers, and inspire others.
               </p>
               <br />
               <p>
@@ -63,9 +62,7 @@ const HomeSection = () => {
             </div>
             <div className="h-14 mt-28">
               <button className="border h-full w-[18.5rem] rounded-2xl flex items-center justify-center gap-2 group bg-white text-black">
-                <span className="font-helvetica-neue-medium text-[1.65rem]">
-                  Learn More
-                </span>
+                <span className="font-helvetica-neue-medium text-[1.65rem]">Learn More</span>
                 <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
               </button>
             </div>
@@ -73,10 +70,7 @@ const HomeSection = () => {
 
           {/* image: carousel */}
           <div className="col-span-3 relative overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-tr-3xl"
-              src={cardImage}
-            />
+            <img className="w-full h-full object-cover rounded-tr-3xl" src={cardImage} />
 
             {/* style: black gradient that mask images (left) */}
             <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-l from-transparent to-black/80" />

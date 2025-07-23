@@ -26,9 +26,7 @@ const FeaturedWorksSection = () => {
 
         {/* component: footer section */}
         <div className="h-[15%] gap-4 flex items-center justify-between">
-          <h4 className="font-semibold text-2xl">
-            {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
-          </h4>
+          <h4 className="font-semibold text-2xl">{"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}</h4>
           <button className="flex gap-3 items-center group">
             <span className="text-2xl">SUBMIT YOURS</span>
             <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
@@ -45,19 +43,15 @@ const FeaturedWorksSection = () => {
 const ImageCard = () => {
   return (
     <div className="h-full w-full relative">
-      <img
-        src={placeholderImage}
-        className="w-full h-full object-cover rounded-lg"
-      />
+      <img src={placeholderImage} className="w-full h-full object-cover rounded-lg" />
 
       {/* text: image description */}
       <div className="absolute bottom-0 left-0 h-24 text-white z-10 flex">
         <div className="w-4/5 mx-8 mt-2">
           <h3 className="text-[1.4rem] w-fit">Title</h3>
           <p className="text-[0.7rem] line-clamp-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            quaerat quisquam quidem Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nesciunt quaerat quisquam quidem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quaerat quisquam quidem Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Nesciunt quaerat quisquam quidem
           </p>
         </div>
 

@@ -19,22 +19,13 @@ const Navbar = () => {
     >
       <nav className="flex gap-4">
         {/* component: NTC logo */}
-        <img
-          src={NTCLogo}
-          alt="Logo NTC"
-          onClick={() => scrollToSection("Home")}
-          className="h-7 me-8 cursor-pointer"
-        />
+        <img src={NTCLogo} alt="Logo NTC" onClick={() => scrollToSection("Home")} className="h-7 me-8 cursor-pointer" />
 
         {/* components: navigation items */}
         {Object.values(contentSection[currentContent])
           .slice(1)
           .map((item, index) => (
-            <button
-              key={index}
-              onClick={() => scrollToSection(item)}
-              className="font-helvetica-neue-roman"
-            >
+            <button key={index} onClick={() => scrollToSection(item)} className="font-helvetica-neue-roman">
               {item}
             </button>
           ))}

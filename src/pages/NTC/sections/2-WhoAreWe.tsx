@@ -88,51 +88,32 @@ const WhoAreWeSection = () => {
           <div className="h-18 w-60 mt-10">
             <img className="m-auto" src={NTCLogo} alt="Logo NTC" />
           </div>
-          <h1 className="text-[4rem] mt-24 h-20 w-fit font-schabo-condensed">
-            WHO ARE WE?
-          </h1>
+          <h1 className="text-[4rem] mt-24 h-20 w-fit font-schabo-condensed">WHO ARE WE?</h1>
           <div className="font-helvetica-neue-roman">
             <p className="mt-14 h-28 line-clamp-4 max-w-[30rem]">
-              Create, Inspire, Innovate. NTC Deparment is a dynamic creative
-              community specializing in gaming, and pop culture content with a
-              talented team of designers, editors, and creators, we bring ideas
-              to life through visuals.
+              Create, Inspire, Innovate. NTC Deparment is a dynamic creative community specializing in gaming, and pop
+              culture content with a talented team of designers, editors, and creators, we bring ideas to life through
+              visuals.
             </p>
           </div>
           <div className="mt-[7.5rem] h-16 w-62">
             <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group">
-              <span className="font-helvetica-neue-medium text-[1.65rem]">
-                About Us
-              </span>
+              <span className="font-helvetica-neue-medium text-[1.65rem]">About Us</span>
               <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
             </button>
           </div>
         </div>
         {/* image: showcase 8 grid */}
         <div className="w-[40rem] relative flex justify-between">
-          <ImageList
-            key={1}
-            images={imageListLeft}
-            frameAnimation={animationFrameLeft}
-          />
-          <ImageList
-            key={2}
-            images={imageListRight}
-            frameAnimation={animationFrameRight}
-          />
+          <ImageList key={1} images={imageListLeft} frameAnimation={animationFrameLeft} />
+          <ImageList key={2} images={imageListRight} frameAnimation={animationFrameRight} />
         </div>
       </div>
     </div>
   );
 };
 
-const ImageList = ({
-  images,
-  frameAnimation,
-}: {
-  images: string[];
-  frameAnimation: FrameAnimation[];
-}) => {
+const ImageList = ({ images, frameAnimation }: { images: string[]; frameAnimation: FrameAnimation[] }) => {
   const controls = useAnimation();
   const [highlightIndex, setHighlightIndex] = useState(-1);
 
@@ -153,9 +134,7 @@ const ImageList = ({
         });
       }
 
-      const percentage = Number(
-        frameAnimation[0].initial.y.slice(0, -1).slice(1)
-      );
+      const percentage = Number(frameAnimation[0].initial.y.slice(0, -1).slice(1));
       const imageIndex = Math.floor((percentage / 100) * images.length);
       setHighlightIndex(imageIndex + 1);
 
@@ -182,11 +161,7 @@ const ImageList = ({
               index === highlightIndex ? "opacity-100" : "opacity-40 blur-[1px]"
             )}
           >
-            <img
-              src={img}
-              className="max-w-[18rem] max-h-[18rem] object-cover rounded-xl"
-              alt={`Nindy ${index + 1}`}
-            />
+            <img src={img} className="max-w-[18rem] max-h-[18rem] object-cover rounded-xl" alt={`Nindy ${index + 1}`} />
           </div>
         ))}
       </motion.div>

@@ -17,10 +17,7 @@ const HomeSection = () => {
 
           {/* image: carousel */}
           <div className="col-span-3 bg-green-500 relative overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-tr-lg"
-              src={placeholderImage}
-            />
+            <img className="w-full h-full object-cover rounded-tr-lg" src={placeholderImage} />
 
             {/* style: black gradient that mask images (left) */}
             <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-l from-transparent to-black/80" />

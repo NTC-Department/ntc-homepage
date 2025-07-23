@@ -12,13 +12,7 @@ interface Props {
 }
 
 const Section = (props: Props) => {
-  const {
-    id,
-    children,
-    className,
-    isCentered = true,
-    primaryColor = "white",
-  } = props;
+  const { id, children, className, isCentered = true, primaryColor = "white" } = props;
 
   const { onSectionChange } = useSection();
   const { ref, inView } = useInView({
@@ -53,9 +47,7 @@ const Section = (props: Props) => {
       className={clsx(
         "w-full h-screen snap-start",
         isCentered && "flex justify-center items-center",
-        primaryColor === "white"
-          ? "bg-white text-black"
-          : "bg-black text-white",
+        primaryColor === "white" ? "bg-white text-black" : "bg-black text-white",
         className
       )}
     >
