@@ -1,5 +1,5 @@
-import placeholderImage from "@assets/content/placeholder.jpg";
 import moment from "moment";
+import placeholderImage from "@assets/content/placeholder.jpg";
 
 const MoreInfoSection = () => {
   return (

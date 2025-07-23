@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import cardImage from "@assets/content/NTC/sections/1-Home/card-image.png";
+import clsx from "clsx";
 import background1 from "@assets/content/NTC/sections/1-Home/background-1.png";
 import background2 from "@assets/content/NTC/sections/1-Home/background-2.png";
 import background3 from "@assets/content/NTC/sections/1-Home/background-3.png";
-import { FaArrowRight } from "react-icons/fa";
-import clsx from "clsx";
+import cardImage from "@assets/content/NTC/sections/1-Home/card-image.png";
 import { movingArrow } from "@classStyle/hover";
+import { FaArrowRight } from "react-icons/fa";
 
 const backgrounds = [background1, background2, background3];
 

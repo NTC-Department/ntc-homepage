@@ -1,5 +1,5 @@
-import placeholderImage from "@assets/content/placeholder.jpg";
 import clsx from "clsx";
+import placeholderImage from "@assets/content/placeholder.jpg";
 
 const WhoAreWeSection = () => {
   return (

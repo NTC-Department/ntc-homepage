@@ -1,6 +1,6 @@
-import useCoreStore from "@contexts/core/store";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import useCoreStore from "@contexts/core/store";
 
 const useTrackWebContent = () => {
   const { setContent } = useCoreStore();

@@ -1,9 +1,9 @@
-import placeholderImage from "@assets/content/placeholder.jpg";
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { FaChevronRight } from "react-icons/fa";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+import placeholderImage from "@assets/content/placeholder.jpg";
 import { movingArrow } from "@classStyle/hover";
+import { FaArrowRight } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const OurPartnerSection = () => {
   const partnerList: Partner[] = [

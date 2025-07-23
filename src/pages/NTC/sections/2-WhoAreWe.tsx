@@ -1,14 +1,14 @@
+import { useEffect, useState } from "react";
 import clsx from "clsx";
-import NTCLogo from "@public/images/NTCLogo.png";
+import { motion, useAnimation } from "framer-motion";
 import nindy1 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-1.jpg";
 import nindy2 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-2.jpg";
 import nindy3 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-3.jpg";
 import nindy4 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-4.jpg";
 import nindy5 from "@assets/content/NTC/sections/2-WhoAreWe/nindy-5.jpg";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 import { movingArrow } from "@classStyle/hover";
+import { FaArrowRight } from "react-icons/fa";
+import NTCLogo from "@public/images/NTCLogo.png";
 
 const WhoAreWeSection = () => {
   const imagesA = [nindy1, nindy2, nindy3, nindy4, nindy5];

@@ -1,5 +1,5 @@
-import useCoreStore from "@contexts/core/store";
 import { useNavigate } from "react-router-dom";
+import useCoreStore from "@contexts/core/store";
 
 interface HookReturn {
   isNTC: boolean;

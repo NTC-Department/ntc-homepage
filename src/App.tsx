@@ -1,8 +1,8 @@
-import Navbar from "@components/Navbar";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import NTCPage from "@pages/NTC";
-import NeogangPage from "@pages/Neogang";
+import Navbar from "@components/Navbar";
 import useTrackWebContent from "@hooks/useTrackWebContent";
+import NeogangPage from "@pages/Neogang";
+import NTCPage from "@pages/NTC";
 
 export default function App() {
   return (

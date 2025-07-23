@@ -1,7 +1,7 @@
-import placeholderImage from "@assets/content/placeholder.jpg";
-import { movingArrow } from "@classStyle/hover";
 import clsx from "clsx";
 import moment from "moment";
+import placeholderImage from "@assets/content/placeholder.jpg";
+import { movingArrow } from "@classStyle/hover";
 import { FaArrowRight } from "react-icons/fa";
 
 const JoinUsSection = () => {

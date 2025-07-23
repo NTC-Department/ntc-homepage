@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import placeholderImage from "@assets/content/placeholder.jpg";
 import { movingArrow } from "@classStyle/hover";
-import clsx from "clsx";
 import { FaImage } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 

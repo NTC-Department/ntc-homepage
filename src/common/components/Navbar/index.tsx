@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import NTCLogo from "@public/images/NTCLogo.png";
-import useCoreStore from "@contexts/core/store";
-import useWebContent from "@hooks/useWebContent";
-import useSection from "@hooks/useSection";
 import { contentSection } from "@consts/contentSection";
+import useCoreStore from "@contexts/core/store";
+import useSection from "@hooks/useSection";
+import useWebContent from "@hooks/useWebContent";
+import NTCLogo from "@public/images/NTCLogo.png";
 
 const Navbar = () => {
   const { currentContent } = useCoreStore();
