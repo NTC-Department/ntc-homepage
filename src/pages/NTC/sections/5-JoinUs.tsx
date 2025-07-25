@@ -9,7 +9,7 @@ const JoinUsSection = () => {
     <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
       <div className="w-full max-w-[100rem] h-full flex flex-col px-4 sm:px-6 lg:px-0">
         <div className="h-[18%] sm:h-[25%] lg:h-[28%] flex">
-          <div className="w-full mt-auto mb-6 sm:mb-8 lg:mb-12 flex">
+          <div className="w-full mt-auto mb-6 md:mb-0 flex">
             <h1 className="text-2xl sm:text-4xl lg:text-[3rem] font-bold h-auto lg:h-20 w-full lg:w-[36rem] text-center lg:text-left">
               JOIN US!
             </h1>
@@ -23,11 +23,11 @@ const JoinUsSection = () => {
           </div>
         </div>
 
-        <div className="h-[5%] sm:h-[6%] lg:h-[5%] gap-3 flex">
+        <div className="h-[5%] sm:h-[6%] gap-3 flex">
           <hr className="w-full mt-auto border-t-2 border-black" />
         </div>
 
-        <div className="h-[13%] sm:h-[14%] lg:h-[12%] flex sm:items-center sm:mt-0 pt-6">
+        <div className="h-[13%] sm:h-[14%] lg:h-[12%] flex sm:items-center sm:pt-0 pt-6">
           <h4 className="font-semibold h-fit text-xs sm:text-lg lg:text-xl text-center lg:text-left w-full">
             {`2021 - ${moment.utc().format("YYYY")} © NTC DEPARTMENT, ALL RIGHTS RESERVED`}
           </h4>

@@ -1,41 +1,47 @@
-import placeholderImage from "@assets/content/placeholder.jpg";
+import background1 from "@assets/content/Neogang/sections/1-Home/background-1.png";
+import background2 from "@assets/content/Neogang/sections/1-Home/background-2.png";
+
+const backgrounds = [background1, background2];
 
 const HomeSection = () => {
   return (
-    <div className="h-full w-full pt-20 pb-16 px-24">
-      {/* component: content carousel card */}
-      <div className="w-full h-full relative text-white">
-        <div className="grid grid-rows-[1fr_auto] grid-cols-5 h-full">
-          {/* text: image description */}
-          <div className="col-span-2 bg-black flex flex-col pt-16 ps-10 pe-4 rounded-tl-3xl">
-            <h1 className="text-3xl border">TITLE</h1>
-            <p className="text-lg h-full border">Description</p>
-            <div className="h-16 border pt-2">
-              <button className="border h-full">Learn More button</button>
-            </div>
-          </div>
+    <div
+      className="h-screen w-full relative flex flex-col items-center justify-center bg-black"
+      style={{
+        backgroundImage: `url(${backgrounds[0]})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transition: "background-image 50ms ease-in-out",
+      }}
+    >
+      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+        <h1 className="text-6xl sm:text-8xl lg:text-9xl xl:text-[10rem] font-schabo-condensed leading-[0.85] mb-6 lg:mb-8 tracking-tight">
+          CREATE, INSPIRE, INNOVATE.
+        </h1>
+        <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl font-helvetica-neue-roman tracking-[0.15em] mb-20 lg:mb-24 opacity-90 max-w-[40rem] mx-auto leading-relaxed">
+          YOU LAY BESIDE ME AND I FEEL SO RIGHT WHEN YOU HOLD MY BODY TIGHT
+        </p>
+      </div>
 
-          {/* image: carousel */}
-          <div className="col-span-3 bg-green-500 relative overflow-hidden">
-            <img className="w-full h-full object-cover rounded-tr-lg" src={placeholderImage} />
+      <div className="h-[10rem] flex z-10 justify-between items-center w-full mx-auto bg-black absolute bottom-0 px-6 lg:px-42 pb-14 sm:pb-0">
+        <div className="text-left text-white md:flex gap-10 items-center h-fit">
+          <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-wider">
+            BOUND BY <span className="text-green-400">CREATIVITY</span>
+          </p>
+          <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-wide">
+            HOME OF <strong>50</strong> NEOGANG MEMBERS
+          </p>
+        </div>
 
-            {/* style: black gradient that mask images (left) */}
-            <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-l from-transparent to-black/80" />
-            <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-l from-transparent to-black/50" />
-
-            {/* style: black gradient that mask images (bottom) */}
-            <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black/80 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
-
-            <div className="absolute bottom-3 right-6">
-              <div className="border">Carousel Button</div>
-            </div>
-          </div>
-
-          {/* style: bottom black bar */}
-          <div className="col-span-5 bg-black h-16 rounded-b-2xl" />
+        <div className="text-right text-white">
+          <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-widest opacity-90">
+            NEOTERIC HQ 2025
+          </p>
         </div>
       </div>
+
+      {/* style: background overlay */}
+      <div className="absolute inset-0 bg-black/40" />
     </div>
   );
 };
