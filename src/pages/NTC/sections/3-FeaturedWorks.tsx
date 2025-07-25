@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const FeaturedWorksSection = () => {
   return (
-    <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
       <div className="w-full max-w-[100%] h-full flex flex-col items-center">
         {/* text: title */}
         <div className="h-[27%] sm:h-[30%] lg:h-[28%] flex">
@@ -25,7 +25,7 @@ const FeaturedWorksSection = () => {
         </div>
 
         {/* component: footer section */}
-        <div className="max-w-[100rem] w-full h-[22%] sm:h-[30%] lg:h-[15%] flex flex-col sm:flex-row items-center sm:items-start xl:items-center sm:justify-between gap-4 sm:gap-0 px-5 lg:px-0 pt-8 sm:pt-10 lg:pt-0">
+        <div className="max-w-[100rem] w-full h-[22%] sm:h-[30%] lg:h-[15%] flex flex-col sm:flex-row items-center sm:items-start xl:items-center sm:justify-between gap-2 sm:gap-0 px-5 lg:px-0 pt-6 sm:pt-10 lg:pt-0">
           <h4 className="font-semibold text-sm sm:text-lg lg:text-2xl text-center sm:text-left sm:w-2/5">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </h4>

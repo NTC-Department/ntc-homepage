@@ -35,7 +35,7 @@ const HomeSection = () => {
 
   return (
     <div
-      className="h-screen w-full relative flex items-center justify-center bg-black px-4"
+      className="h-[100svh] w-full relative flex items-center justify-center bg-black px-4"
       style={{
         backgroundImage: `url(${backgrounds[currentBackground]})`,
         backgroundSize: "cover",
@@ -48,7 +48,9 @@ const HomeSection = () => {
         <div className="grid grid-rows-[1fr_auto] lg:grid-cols-5 h-full">
           {/* text: image description */}
           <div className="lg:col-span-2 bg-black flex flex-col pt-8 sm:pt-20 lg:pt-40 px-4 sm:px-8 lg:ps-18 lg:pe-4 rounded-t-3xl lg:rounded-tl-3xl lg:rounded-tr-none">
-            <h1 className="text-3xl sm:text-5xl lg:text-[4rem] h-auto lg:h-20 font-schabo-condensed leading-tight">NEOGANG</h1>
+            <h1 className="text-3xl sm:text-5xl lg:text-[4rem] h-auto lg:h-20 font-schabo-condensed leading-tight">
+              NEOGANG
+            </h1>
             <div className="text-sm sm:text-base lg:text-lg mt-6 sm:mt-8 lg:mt-12 h-auto lg:h-[10rem] font-helvetica-neue-roman">
               <p className="mb-4">
                 Pushing Creativity Boundaries through Innovative Music and Visual! we commit to push the limits, blend
@@ -69,7 +71,10 @@ const HomeSection = () => {
 
           {/* image: carousel */}
           <div className="lg:col-span-3 relative overflow-hidden h-64 sm:h-80 lg:h-auto">
-            <img className="w-full h-full object-cover rounded-tr-3xl lg:rounded-tr-3xl rounded-tl-3xl lg:rounded-tl-none" src={cardImage} />
+            <img
+              className="w-full h-full object-cover rounded-tr-3xl lg:rounded-tr-3xl rounded-tl-3xl lg:rounded-tl-none"
+              src={cardImage}
+            />
 
             {/* style: black gradient that mask images (left) */}
             <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-l from-transparent to-black/80" />

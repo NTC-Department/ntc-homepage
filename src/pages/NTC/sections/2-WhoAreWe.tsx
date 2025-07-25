@@ -90,7 +90,7 @@ const WhoAreWeSection = () => {
   const { leftFrames, rightFrames } = getAnimationFrames(isMobile);
 
   return (
-    <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
       {/* Desktop Layout - Original Structure */}
       <div className="hidden lg:flex w-full max-w-[100rem] gap-5 justify-center items-start">
         {/* Desktop Content */}

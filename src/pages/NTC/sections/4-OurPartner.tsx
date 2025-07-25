@@ -45,9 +45,9 @@ const OurPartnerSection = () => {
   const rightItems = partnerList.length > 4 ? partnerList.slice(4, 8) : [];
 
   return (
-    <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
       <div className="w-full max-w-[100rem] h-full flex flex-col px-4 sm:px-6 lg:px-0">
-        <div className="h-[20%] sm:h-[25%] lg:h-[28%] flex">
+        <div className="h-[18%] sm:h-[25%] lg:h-[28%] flex">
           <div className="w-full mt-auto mb-4 sm:mb-6 lg:mb-6 h-auto lg:h-20 flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-4 lg:gap-0">
             <h1 className="text-2xl sm:text-4xl lg:text-[3rem] font-bold text-center lg:text-left lg:w-[36rem]">
               OUR PARTNER
