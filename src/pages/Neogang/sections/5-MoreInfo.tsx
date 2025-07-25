@@ -1,39 +1,37 @@
+import clsx from "clsx";
 import moment from "moment";
 import placeholderImage from "@assets/content/placeholder.jpg";
+import { movingArrow } from "@classStyle/hover";
+import { FaArrowRight, FaExclamation } from "react-icons/fa";
 
 const MoreInfoSection = () => {
   return (
-    <div className="h-full w-full">
-      <div className="h-full flex flex-col">
-        {/* text: title */}
-        <div className="h-[35%] flex">
-          <div className="border w-full mt-auto mb-12 px-20">
-            <span className="text-3xl font-bold border">MORE INFO!</span>
+    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
+      <div className="w-full max-w-[100rem] h-full flex flex-col px-4 sm:px-6 lg:px-0">
+        <div className="h-[18%] sm:h-[25%] lg:h-[28%] flex">
+          <div className="w-full pb-6 mt-auto md:mb-0 flex justify-center md:justify-start items-center gap-2">
+            <span className="border p-1.5 rounded-lg bg-black h-fit">
+              <FaExclamation className="w-3 h-3 lg:w-6 lg:h-6 text-white" />
+            </span>
+            <h1 className="text-2xl sm:text-4xl lg:text-[3rem] font-bold">MORE INFO!</h1>
           </div>
         </div>
 
-        {/* component: community card */}
-        <div className="h-[45%] flex gap-3 px-20 border">
-          <CommunityCard />
-          <CommunityCard />
-        </div>
-
-        {/* component: divider */}
-        <div className="h-[7%] gap-3 px-20 flex">
-          <hr className="border w-full mt-auto" />
-        </div>
-
-        {/* component: footer section */}
-        <div className="h-[13%] px-20 flex items-center justify-between">
-          <span className="font-semibold border h-fit">
-            {`2021 - ${moment.utc().format("YYYY")} © NEOTERIC HQ, ALL RIGHTS RESERVED`}
-          </span>
-          <div className="border w-1/4 flex gap-4 justify-evenly">
-            <span className="border w-full text-center">A</span>
-            <span className="border w-full text-center">B</span>
-            <span className="border w-full text-center">C</span>
-            <span className="border w-full text-center">D</span>
+        <div className="h-[64%] sm:h-[55%] lg:h-[55%] gap-3 sm:gap-4 lg:gap-4 relative">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-8 h-full">
+            <CommunityCard />
+            <CommunityCard />
           </div>
+        </div>
+
+        <div className="h-[5%] sm:h-[6%] gap-3 flex">
+          <hr className="w-full mt-auto border-t-2 border-black" />
+        </div>
+
+        <div className="h-[13%] sm:h-[14%] lg:h-[12%] flex sm:items-center sm:pt-0 pt-6">
+          <h4 className="font-semibold h-fit text-xs sm:text-lg lg:text-xl text-center lg:text-left w-full">
+            {`2021 - ${moment.utc().format("YYYY")} © NTC DEPARTMENT, ALL RIGHTS RESERVED`}
+          </h4>
         </div>
       </div>
     </div>
@@ -42,29 +40,29 @@ const MoreInfoSection = () => {
 
 const CommunityCard = () => {
   return (
-    <div className="h-full relative">
+    <div className="h-56 sm:h-60 lg:h-[32.5rem] w-full relative">
       <img src={placeholderImage} className="w-full h-full object-cover rounded-lg" />
 
-      {/* text: image description */}
-      <div className="absolute bottom-0 left-0 h-24 text-white z-10 border flex">
-        <div className="w-4/5 mx-8 mt-2">
-          <h3 className="text-xl border w-fit">Title</h3>
-          <p className="text-[0.6rem] border line-clamp-2">
+      <div className="absolute bottom-0 left-0 h-16 sm:h-20 lg:h-24 text-white z-10 flex">
+        <div className="w-4/5 mx-4 sm:mx-6 lg:mx-8 mt-1 sm:mt-1.5 lg:mt-2">
+          <h3 className="text-sm sm:text-lg lg:text-[1.4rem] w-fit font-semibold">Title</h3>
+          <p className="text-xs sm:text-sm lg:text-[0.7rem] line-clamp-2 mt-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quaerat quisquam quidem Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Nesciunt quaerat quisquam quidem
           </p>
         </div>
 
-        {/* button: arrow right > redirect to content */}
-        <div className="w-1/5 border flex items-center justify-center">
-          <button className="text-3xl border">{"->"}</button>
+        <div className="w-1/5 flex items-center justify-center">
+          <button className="group py-1 sm:py-2 px-2 sm:px-4">
+            <FaArrowRight className={clsx("w-4 h-4 lg:w-5 lg:h-5", movingArrow)} />
+          </button>
         </div>
       </div>
 
-      {/* style: black bottom gradient */}
       <div className="absolute bottom-4 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg" />
       <div className="absolute bottom-4 left-0 w-full h-1/2 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/95 to-transparent rounded-b-lg" />
+      <div className="absolute bottom-0 left-0 w-full h-5 bg-black rounded-b-lg" />
     </div>
   );
 };
