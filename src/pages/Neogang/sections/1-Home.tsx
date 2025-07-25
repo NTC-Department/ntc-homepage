@@ -6,7 +6,7 @@ const backgrounds = [background1, background2];
 const HomeSection = () => {
   return (
     <div
-      className="h-[100svh] w-full relative flex flex-col items-center justify-center bg-black"
+      className="h-screen w-full relative flex flex-col items-center justify-center bg-black"
       style={{
         backgroundImage: `url(${backgrounds[0]})`,
         backgroundSize: "cover",
@@ -23,8 +23,8 @@ const HomeSection = () => {
         </p>
       </div>
 
-      <div className="h-[10rem] flex z-10 justify-between items-center w-full mx-auto bg-black absolute bottom-0 px-6 lg:px-42">
-        <div className="text-left text-white md:flex gap-10 items-center h-fit sm:mt-0 -mt-6">
+      <div className="h-[10rem] flex z-10 justify-between items-center w-full mx-auto bg-black absolute bottom-0 px-6 lg:px-42 pb-14 sm:pb-0">
+        <div className="text-left text-white md:flex gap-10 items-center h-fit">
           <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-wider">
             BOUND BY <span className="text-green-400">CREATIVITY</span>
           </p>
@@ -34,7 +34,7 @@ const HomeSection = () => {
         </div>
 
         <div className="text-right text-white">
-          <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-widest opacity-90 sm:mt-0 -mt-6">
+          <p className="text-sm sm:text-base lg:text-2xl font-helvetica-neue-roman tracking-widest opacity-90">
             NEOTERIC HQ 2025
           </p>
         </div>
