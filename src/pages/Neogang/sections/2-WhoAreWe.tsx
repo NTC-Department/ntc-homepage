@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { motion, useAnimation } from "framer-motion";
-import image1 from "@assets/content/NEOGANG/sections/2-WhoAreWe/image-1.png";
-import image2 from "@assets/content/NEOGANG/sections/2-WhoAreWe/image-2.png";
-import image3 from "@assets/content/NEOGANG/sections/2-WhoAreWe/image-3.png";
-import image4 from "@assets/content/NEOGANG/sections/2-WhoAreWe/image-4.png";
-import image5 from "@assets/content/NEOGANG/sections/2-WhoAreWe/image-5.png";
+import image1 from "@assets/content/Neogang/sections/2-WhoAreWe/image-1.png";
+import image2 from "@assets/content/Neogang/sections/2-WhoAreWe/image-2.png";
+import image3 from "@assets/content/Neogang/sections/2-WhoAreWe/image-3.png";
+import image4 from "@assets/content/Neogang/sections/2-WhoAreWe/image-4.png";
+import image5 from "@assets/content/Neogang/sections/2-WhoAreWe/image-5.png";
 import { movingArrow } from "@classStyle/hover";
 import useWindowSize from "@hooks/useWindowSize";
 import { FaArrowRight } from "react-icons/fa";

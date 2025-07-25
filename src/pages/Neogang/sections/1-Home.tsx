@@ -1,5 +1,5 @@
-import background1 from "@assets/content/NEOGANG/sections/1-Home/background-1.png";
-import background2 from "@assets/content/NEOGANG/sections/1-Home/background-2.png";
+import background1 from "@assets/content/Neogang/sections/1-Home/background-1.png";
+import background2 from "@assets/content/Neogang/sections/1-Home/background-2.png";
 
 const backgrounds = [background1, background2];
 
