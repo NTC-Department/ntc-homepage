@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 const FeaturedWorksSection = () => {
   return (
     <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-      <div className="w-full max-w-[100rem] h-full flex flex-col">
+      <div className="w-full max-w-[100%] h-full flex flex-col border items-center">
         {/* text: title */}
         <div className="h-[27%] sm:h-[30%] lg:h-[28%] flex">
           <div className="mx-auto mt-auto mb-6 sm:mb-8 lg:mb-12 h-12 sm:h-16 lg:h-20 w-full max-w-[36rem] flex items-center gap-2 sm:gap-3 lg:gap-4 justify-center">
@@ -17,7 +17,7 @@ const FeaturedWorksSection = () => {
         </div>
 
         {/* component: content card with background */}
-        <div className="flex-1 relative bg-black/10 flex items-center justify-center py-8 lg:py-10 border px-4">
+        <div className="w-full flex-1 relative bg-black/10 flex items-center justify-center py-8 lg:py-10 px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <ImageCard />
             <ImageCard />
@@ -25,7 +25,7 @@ const FeaturedWorksSection = () => {
         </div>
 
         {/* component: footer section */}
-        <div className="h-[22%] sm:h-[30%] lg:h-[15%] flex flex-col sm:flex-row items-center sm:items-start xl:items-center sm:justify-between gap-4 sm:gap-0 px-5 lg:px-0 pt-8 sm:pt-10 lg:pt-0">
+        <div className="max-w-[100rem] w-full h-[22%] sm:h-[30%] lg:h-[15%] flex flex-col sm:flex-row items-center sm:items-start xl:items-center sm:justify-between gap-4 sm:gap-0 px-5 lg:px-0 pt-8 sm:pt-10 lg:pt-0">
           <h4 className="font-semibold text-sm sm:text-lg lg:text-2xl text-center sm:text-left sm:w-2/5">
             {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
           </h4>
