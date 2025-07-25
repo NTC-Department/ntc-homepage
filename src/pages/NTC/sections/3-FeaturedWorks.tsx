@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 const FeaturedWorksSection = () => {
   return (
     <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-      <div className="w-full max-w-[100%] h-full flex flex-col border items-center">
+      <div className="w-full max-w-[100%] h-full flex flex-col items-center">
         {/* text: title */}
         <div className="h-[27%] sm:h-[30%] lg:h-[28%] flex">
           <div className="mx-auto mt-auto mb-6 sm:mb-8 lg:mb-12 h-12 sm:h-16 lg:h-20 w-full max-w-[36rem] flex items-center gap-2 sm:gap-3 lg:gap-4 justify-center">
