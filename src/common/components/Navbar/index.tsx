@@ -27,7 +27,7 @@ const Navbar = () => {
     <>
       <div
         className={clsx(
-          "fixed z-[80] w-full backdrop-blur-md h-16 sm:h-20 lg:h-24 bg-black text-white px-4 sm:px-8 lg:px-44 flex items-center justify-between",
+          "fixed z-[80] w-full h-16 sm:h-20 lg:h-24 bg-black text-white px-4 sm:px-8 lg:px-44 flex items-center justify-between",
           isFirstSection ? "animate-firstSection" : "animate-onSection"
         )}
       >
