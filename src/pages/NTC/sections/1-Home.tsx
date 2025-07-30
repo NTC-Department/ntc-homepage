@@ -58,12 +58,13 @@ const HomeSection = () => {
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
 
-            <div className="absolute bottom-4 sm:bottom-8 lg:bottom-20 right-4 sm:right-8 lg:right-16 w-24 sm:w-32 lg:w-[8.5rem] h-8 sm:h-9 lg:h-[2.3rem] flex border gap-1 justify-center items-center">
+            {/* // !! disabled carousel indicator for now */}
+            {/* <div className="absolute bottom-4 sm:bottom-8 lg:bottom-20 right-4 sm:right-8 lg:right-16 w-24 sm:w-32 lg:w-[8.5rem] h-8 sm:h-9 lg:h-[2.3rem] flex border gap-1 justify-center items-center">
               <div className="border rounded-full w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               <div className="border rounded-full w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bg-white" />
               <div className="border rounded-full w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               <div className="border rounded-full w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-            </div>
+            </div> */}
           </div>
 
           {/* style: bottom black bar */}
