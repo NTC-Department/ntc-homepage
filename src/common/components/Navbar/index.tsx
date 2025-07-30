@@ -55,7 +55,7 @@ const Navbar = () => {
             onClick={switchWebContent}
             className="text-sm sm:text-base lg:text-lg rounded-md p-1 px-2 sm:px-3 capitalize text-primary font-helvetica-neue-bold"
           >
-            {currentContent === "ntc" ? "Neogang" : "NTC"}
+            {currentContent === "ntc" ? "Neogang" : "NTC Department"}
           </button>
 
           <button onClick={toggleMobileMenu} className="lg:hidden text-white p-2">
