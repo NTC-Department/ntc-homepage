@@ -1,45 +1,18 @@
-import { useState, useEffect } from "react";
 import clsx from "clsx";
-import background1 from "@assets/content/NTC/sections/1-Home/background-1.png";
-import background2 from "@assets/content/NTC/sections/1-Home/background-2.png";
-import background3 from "@assets/content/NTC/sections/1-Home/background-3.png";
+import background from "@assets/content/NTC/sections/1-Home/background-1.png";
 import cardImage from "@assets/content/NTC/sections/1-Home/card-image.png";
 import { movingArrow } from "@classStyle/hover";
 import { FaArrowRight } from "react-icons/fa";
 
-const backgrounds = [background1, background2, background3];
-
 const HomeSection = () => {
-  const [currentBackground, setCurrentBackground] = useState(0);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const sequence = async () => {
-      while (isMounted) {
-        for (let i = 0; i < backgrounds.length; i++) {
-          if (!isMounted) return;
-          setCurrentBackground(i);
-          await new Promise((resolve) => setTimeout(resolve, 70));
-        }
-        await new Promise((resolve) => setTimeout(resolve, 5000));
-      }
-    };
-
-    sequence();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
   return (
     <div
       className="h-[100svh] w-full relative flex items-center justify-center bg-black px-4"
       style={{
-        backgroundImage: `url(${backgrounds[currentBackground]})`,
+        backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed",
         transition: "background-image 50ms ease-in-out",
       }}
     >
