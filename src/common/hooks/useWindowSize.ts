@@ -9,8 +9,8 @@ interface HookReturn {
   md: boolean;
   lg: boolean;
   xl: boolean;
-  "2xl": boolean;
-  "3xl": boolean;
+  xxl: boolean;
+  xxxl: boolean;
   isMobile: boolean;
 }
 const useWindowSize = (): HookReturn => {
@@ -39,8 +39,8 @@ const useWindowSize = (): HookReturn => {
     md: windowWidth >= 768,
     lg: windowWidth >= 1024,
     xl: windowWidth >= 1280,
-    "2xl": windowWidth >= 1536,
-    "3xl": windowWidth >= 1792,
+    xxl: windowWidth >= 1536,
+    xxxl: windowWidth >= 1792,
     isMobile,
   };
 };
