@@ -1,4 +1,5 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import Debugger from "@components/Debugger";
 import Navbar from "@components/Navbar";
 import useTrackWebContent from "@hooks/useTrackWebContent";
 import NeogangPage from "@pages/Neogang";
@@ -30,6 +31,7 @@ function BaseLayout() {
         <div className="w-screen">
           <Outlet />
         </div>
+        <Debugger />
       </main>
       <footer>
         <div className="w-screen">{/* <Footer /> */}</div>
