@@ -6,6 +6,7 @@ import useCoreStore from "@contexts/core/store";
 import useSection from "@hooks/useSection";
 import useWebContent from "@hooks/useWebContent";
 import { FaBars, FaTimes } from "react-icons/fa";
+import NeogangLogo from "@public/images/NeogangLogo.png";
 import NTCLogo from "@public/images/NTCLogo.png";
 
 const Navbar = () => {
@@ -13,6 +14,11 @@ const Navbar = () => {
   const { switchWebContent } = useWebContent();
   const { scrollToSection, isFirstSection } = useSection();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  document.title = currentContent === "ntc" ? "NTC Department" : "Neogang";
+  document
+    .querySelector("link[rel='icon']")
+    ?.setAttribute("href", currentContent === "ntc" ? "/ntc.ico" : "/neogang.ico");
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -23,20 +29,22 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const isNTC = currentContent === "ntc";
+
   return (
     <>
       <div
         className={clsx(
-          "fixed z-[80] w-full h-[10vh] bg-black text-white px-[10vw] flex items-center justify-between",
+          "fixed z-[80] w-full h-[10vh] bg-black text-white md:px-[10vw] px-6 flex items-center justify-between",
           isFirstSection ? "animate-firstSection" : "animate-onSection"
         )}
       >
         <div className="flex items-center gap-4 lg:gap-0">
           <img
-            src={NTCLogo}
+            src={isNTC ? NTCLogo : NeogangLogo}
             alt="Logo NTC"
             onClick={() => handleNavClick("Home")}
-            className="h-5 sm:h-6 lg:h-7 cursor-pointer"
+            className={clsx("cursor-pointer", isNTC ? "w-28 lg:w-32" : "w-28 lg:w-32")}
           />
 
           <nav className="hidden lg:flex gap-4 lg:ml-8">
@@ -55,7 +63,7 @@ const Navbar = () => {
             onClick={switchWebContent}
             className="text-sm sm:text-base lg:text-lg rounded-md p-1 px-2 sm:px-3 capitalize text-primary font-helvetica-neue-bold"
           >
-            {currentContent === "ntc" ? "Neogang" : "NTC Department"}
+            {isNTC ? "Neogang" : "NTC Department"}
           </button>
 
           <button onClick={toggleMobileMenu} className="lg:hidden text-white p-2">
