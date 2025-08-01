@@ -1,4 +1,4 @@
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
 // import Debugger from "@components/Debugger";
 import Navbar from "@components/Navbar";
 import useTrackWebContent from "@hooks/useTrackWebContent";
@@ -10,7 +10,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<BaseLayout />}>
-          <Route path="/" element={<NTCPage />} />
+          <Route path="/" element={<Navigate to="/ntc" replace />} />
+          <Route path="/ntc" element={<NTCPage />} />
           <Route path="/neogang" element={<NeogangPage />} />
         </Route>
       </Routes>
