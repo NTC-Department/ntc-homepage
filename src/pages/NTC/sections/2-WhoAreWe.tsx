@@ -89,74 +89,81 @@ const WhoAreWeSection = () => {
 
   const { leftFrames, rightFrames } = getAnimationFrames(isMobile);
 
-  return (
-    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
-      {/* Desktop Layout - Original Structure */}
-      <div className="hidden lg:flex w-full max-w-[100rem] gap-5 justify-center items-start">
-        {/* Desktop Content */}
-        <div className="w-full max-w-[50rem] h-[45rem] my-auto flex flex-col ps-4 text-left">
-          <div className="h-12 sm:h-16 lg:h-18 w-48 sm:w-56 lg:w-60 mt-4 sm:mt-6 lg:mt-10">
-            <img className="h-full w-auto" src={NTCLogo} alt="Logo NTC" />
+  const desktopContent = () => (
+    <div className="hidden lg:flex w-full max-w-[100rem] gap-5 justify-center items-start">
+      {/* desktop Content */}
+      <div className="w-full max-w-[50rem] h-[62vh] my-auto grid grid-rows-[auto_0.40fr_auto_0.15fr_auto_0.45fr_auto] ps-4 text-left ">
+        <div className="h-12 lg:-16 xl:h-18">
+          <img className="h-full w-auto max-h-16" src={NTCLogo} alt="Logo NTC" />
+        </div>
+        <div />
+        <h1 className="xl:text-7xl text-5xl w-fit font-schabo-condensed">WHO ARE WE?</h1>
+        <div />
+        <div className="font-helvetica-neue-roman max-w-[30rem]">
+          <p className="xl:text-base text-sm">
+            Create, Inspire, Innovate. NTC Department is a dynamic creative community specializing in gaming and pop
+            culture content. With a talented team of designers, editors, and creators, we bring ideas to life through
+            visuals.
+          </p>
+        </div>
+        <div />
+        <div className="xl:h-16 xl:w-62 h-12 w-50">
+          <button className="h-full w-full border rounded-2xl flex items-center justify-center gap-2 group">
+            <span className="font-helvetica-neue-medium xl:text-2xl text-xl">About Us</span>
+            <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
+          </button>
+        </div>
+      </div>
+
+      {/* component: right side images */}
+      <div className="w-[40rem] relative flex justify-between gap-4">
+        <ImageList images={imageListLeft} frameAnimation={leftFrames} isMobile={false} />
+        <ImageList images={imageListRight} frameAnimation={rightFrames} isMobile={false} />
+      </div>
+    </div>
+  );
+
+  const mobileContent = () => (
+    <div className="lg:hidden w-full h-full relative">
+      {/* component: background images */}
+      <div className="absolute inset-0 flex justify-center items-center gap-2 sm:gap-4">
+        <ImageList images={imageListLeft} frameAnimation={leftFrames} isMobile={true} />
+        <ImageList images={imageListRight} frameAnimation={rightFrames} isMobile={true} />
+      </div>
+
+      {/* container: glassmorphism effect */}
+      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
+        <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 shadow-xl text-center max-w-md w-full">
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <img className="h-12 sm:h-16 w-auto" src={NTCLogo} alt="Logo NTC" />
           </div>
-          <h1 className="text-[4rem] mt-24 h-20 w-fit font-schabo-condensed">WHO ARE WE?</h1>
-          <div className="font-helvetica-neue-roman">
-            <p className="mt-14 h-28 line-clamp-4 max-w-[30rem] text-base">
-              Create, Inspire, Innovate. NTC Deparment is a dynamic creative community specializing in gaming, and pop
+
+          <h1 className="text-3xl sm:text-4xl font-schabo-condensed leading-tight mb-6 sm:mb-8">WHO ARE WE?</h1>
+
+          <div className="font-helvetica-neue-roman mb-8 sm:mb-10">
+            <p className="text-sm sm:text-base leading-relaxed">
+              Create, Inspire, Innovate. NTC Department is a dynamic creative community specializing in gaming, and pop
               culture content with a talented team of designers, editors, and creators, we bring ideas to life through
               visuals.
             </p>
           </div>
-          <div className="mt-[7.5rem] h-16 w-62">
-            <button className="h-full border w-full rounded-2xl flex items-center justify-center gap-2 group">
-              <span className="font-helvetica-neue-medium text-[1.65rem]">About Us</span>
-              <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
-            </button>
-          </div>
-        </div>
 
-        {/* Desktop Image Gallery */}
-        <div className="w-[40rem] relative flex justify-between gap-4">
-          <ImageList images={imageListLeft} frameAnimation={leftFrames} isMobile={false} />
-          <ImageList images={imageListRight} frameAnimation={rightFrames} isMobile={false} />
+          <button className="h-12 sm:h-14 w-full border rounded-2xl flex items-center justify-center gap-2 group hover:bg-white hover:text-black transition-colors duration-300">
+            <span className="font-helvetica-neue-medium text-lg sm:text-xl">About Us</span>
+            <FaArrowRight className={clsx("w-4 h-4 sm:w-5 sm:h-5 mt-0.5", movingArrow)} />
+          </button>
         </div>
       </div>
+    </div>
+  );
 
-      {/* Mobile Layout - Images as Background with Overlay Content */}
-      <div className="lg:hidden w-full h-full relative">
-        {/* Background Images */}
-        <div className="absolute inset-0 flex justify-center items-center gap-2 sm:gap-4">
-          <ImageList images={imageListLeft} frameAnimation={leftFrames} isMobile={true} />
-          <ImageList images={imageListRight} frameAnimation={rightFrames} isMobile={true} />
-        </div>
+  return (
+    <div className="h-[100svh] w-full lg:max-w-screen relative flex items-center justify-center overflow-hidden">
+      {/* Desktop Layout */}
+      {desktopContent()}
 
-        {/* Overlay Content with Glassmorphism */}
-        <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 shadow-xl text-center max-w-md w-full">
-            {/* Logo */}
-            <div className="flex justify-center mb-6 sm:mb-8">
-              <img className="h-12 sm:h-16 w-auto" src={NTCLogo} alt="Logo NTC" />
-            </div>
-
-            {/* Title */}
-            <h1 className="text-3xl sm:text-4xl font-schabo-condensed leading-tight mb-6 sm:mb-8">WHO ARE WE?</h1>
-
-            {/* Description */}
-            <div className="font-helvetica-neue-roman mb-8 sm:mb-10">
-              <p className="text-sm sm:text-base leading-relaxed">
-                Create, Inspire, Innovate. NTC Department is a dynamic creative community specializing in gaming, and
-                pop culture content with a talented team of designers, editors, and creators, we bring ideas to life
-                through visuals.
-              </p>
-            </div>
-
-            {/* Button */}
-            <button className="h-12 sm:h-14 w-full border rounded-2xl flex items-center justify-center gap-2 group hover:bg-white hover:text-black transition-colors duration-300">
-              <span className="font-helvetica-neue-medium text-lg sm:text-xl">About Us</span>
-              <FaArrowRight className={clsx("w-4 h-4 sm:w-5 sm:h-5 mt-0.5", movingArrow)} />
-            </button>
-          </div>
-        </div>
-      </div>
+      {/* Mobile Layout */}
+      {mobileContent()}
     </div>
   );
 };
@@ -238,7 +245,7 @@ const ImageList = ({
 
   // Desktop: Original full-size layout
   return (
-    <div className="relative w-[18rem]">
+    <div className="relative w-[12rem] lg:w-[14rem] xl:w-[18rem]">
       <motion.div animate={controls} className="flex flex-col gap-4 absolute">
         {images.map((img, index) => (
           <div
@@ -250,7 +257,7 @@ const ImageList = ({
           >
             <img
               src={img}
-              className="max-w-[18rem] max-h-[18rem] object-cover rounded-xl"
+              className="max-w-[12rem] max-h-[12rem] lg:max-w-[14rem] lg:max-h-[14rem] xl:max-w-[18rem] xl:max-h-[18rem] object-cover rounded-xl"
               alt={`Character ${index + 1}`}
               loading="lazy"
             />
