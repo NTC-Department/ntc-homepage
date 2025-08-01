@@ -5,35 +5,67 @@ import { FaImage } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
 const FeaturedWorksSection = () => {
+  const desktopContent = () => (
+    <div className="hidden sm:flex flex-col w-full h-full items-center pt-[13vh]">
+      {/* Title */}
+      <div className="mx-auto mb-auto h-fit w-full flex items-center gap-[1vw] justify-center pb-[1vh]">
+        <FaImage className="w-[5vh] h-[5vh]" />
+        <h1 className="text-[5vh] font-bold">FEATURED WORKS</h1>
+      </div>
+
+      {/* Content */}
+      <div className="w-full max-h-[65vh] flex-1 bg-black/10 flex items-center justify-center py-10 px-4">
+        <div className="flex flex-row items-center justify-center gap-8">
+          <ImageCard />
+          <ImageCard />
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="w-full px-[7vw] h-[15%] flex flex-row items-center justify-between">
+        <h4 className="font-semibold xl:text-2xl lg:text-xl text-xs text-left w-2/5">
+          {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
+        </h4>
+        <button className="flex gap-3 items-center group">
+          <span className="xl:text-2xl lg:text-xl text-xs">SUBMIT YOURS</span>
+          <FaArrowRight className={clsx("w-5 h-5 mt-0.5", movingArrow)} />
+        </button>
+      </div>
+    </div>
+  );
+
+  const mobileContent = () => (
+    <div className="flex flex-col sm:hidden w-full h-full pt-[12svh]">
+      {/* Title */}
+      <div className="mx-auto mt-auto mb-8 h-12 w-full max-w-[36rem] flex items-center gap-2 justify-center">
+        <FaImage className="w-6 h-6" />
+        <h1 className="text-2xl font-bold">FEATURED WORKS</h1>
+      </div>
+
+      {/* Content */}
+      <div className="w-full flex-1 bg-black/10 flex items-center justify-center py-8 px-4">
+        <div className="flex flex-col items-center gap-4">
+          <ImageCard />
+          <ImageCard />
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="w-full h-[30%] flex flex-col items-center justify-start gap-2 px-5 pt-6">
+        <h4 className="font-semibold text-sm text-center w-full">{"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}</h4>
+        <button className="flex gap-2 items-center group">
+          <span className="text-base">SUBMIT YOURS</span>
+          <FaArrowRight className={clsx("w-4 h-4 mt-0.5", movingArrow)} />
+        </button>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
-      <div className="w-full max-w-[100%] h-full flex flex-col items-center">
-        {/* text: title */}
-        <div className="h-[27%] sm:h-[30%] lg:h-[28%] flex">
-          <div className="mx-auto mt-auto mb-6 sm:mb-8 lg:mb-12 h-12 sm:h-16 lg:h-20 w-full max-w-[36rem] flex items-center gap-2 sm:gap-3 lg:gap-4 justify-center">
-            <FaImage className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12" />
-            <h1 className="text-xl sm:text-2xl lg:text-[3rem] font-bold">FEATURED WORKS</h1>
-          </div>
-        </div>
-
-        {/* component: content card with background */}
-        <div className="w-full flex-1 relative bg-black/10 flex items-center justify-center py-8 lg:py-10 px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
-            <ImageCard />
-            <ImageCard />
-          </div>
-        </div>
-
-        {/* component: footer section */}
-        <div className="max-w-[100rem] w-full h-[22%] sm:h-[30%] lg:h-[15%] flex flex-col sm:flex-row items-center sm:items-start xl:items-center sm:justify-between gap-2 sm:gap-0 px-5 lg:px-0 pt-6 sm:pt-10 lg:pt-0">
-          <h4 className="font-semibold text-sm sm:text-lg lg:text-2xl text-center sm:text-left sm:w-2/5">
-            {"CREATIVE WORKS HANDPICKED BY OUR STAFF :)"}
-          </h4>
-          <button className="flex gap-2 lg:gap-3 items-center group">
-            <span className="text-base sm:text-lg lg:text-2xl">SUBMIT YOURS</span>
-            <FaArrowRight className={clsx("w-4 h-4 lg:w-5 lg:h-5 mt-0.5", movingArrow)} />
-          </button>
-        </div>
+    <div className="h-[100svh] w-full relative flex overflow-hidden bg-gray-100">
+      <div className="w-full max-w-[100%] h-full">
+        {mobileContent()}
+        {desktopContent()}
       </div>
     </div>
   );
@@ -41,7 +73,7 @@ const FeaturedWorksSection = () => {
 
 const ImageCard = () => {
   return (
-    <div className="h-48 sm:h-60 lg:h-[30rem] w-full max-w-sm sm:max-w-none relative">
+    <div className="h-48 sm:h-60 lg:h-[30rem] max-h-[60vh] w-full max-w-sm sm:max-w-none relative">
       <img src={placeholderImage} className="w-full h-full object-cover rounded-lg" />
 
       {/* text: image description */}
@@ -64,7 +96,7 @@ const ImageCard = () => {
 
       {/* style: black bottom gradient */}
       <div className="absolute bottom-4 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg" />
-      <div className="absolute bottom-4 left-0 w-full h-1/2 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
+      <div className="absolute bottom-4 left-0 w-full h-1/5 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/95 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-5 bg-black rounded-b-lg" />
     </div>
