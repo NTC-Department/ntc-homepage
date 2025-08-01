@@ -6,28 +6,24 @@ import { FaArrowRight } from "react-icons/fa";
 
 const JoinUsSection = () => {
   return (
-    <div className="h-[100svh] w-full relative flex items-center justify-center overflow-hidden">
-      <div className="w-full max-w-[100rem] h-full flex flex-col px-4 sm:px-6 lg:px-0">
-        <div className="h-[18%] sm:h-[25%] lg:h-[28%] flex">
-          <div className="w-full mt-auto mb-6 md:mb-0 flex">
-            <h1 className="text-2xl sm:text-4xl lg:text-[3rem] font-bold h-auto lg:h-20 w-full lg:w-[36rem] text-center lg:text-left">
-              JOIN US!
-            </h1>
-          </div>
+    <div className="h-[100svh] w-full relative flex justify-center overflow-hidden md:pt-[18vh] pt-[12vh] bg-gray-100">
+      <div className="w-full lg:mx-[7vw] mx-8 h-full flex flex-col">
+        <div className="w-full flex mb-[2vh]">
+          <h1 className="text-2xl sm:text-4xl lg:text-[5vh] font-bold sm:mx-0 mx-auto">JOIN US!</h1>
         </div>
 
-        <div className="h-[64%] sm:h-[55%] lg:h-[55%] gap-3 sm:gap-4 lg:gap-4 relative">
+        <div className="h-fit md:max-h-[70vh] max-h-[58vh] gap-3 sm:gap-4 lg:gap-4 relative my-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-8 h-full">
             <CommunityCard />
             <CommunityCard />
           </div>
         </div>
 
-        <div className="h-[5%] sm:h-[6%] gap-3 flex">
+        <div className="h-[5%] sm:h-[6%] gap-3 flex mt-auto">
           <hr className="w-full mt-auto border-t-2 border-black" />
         </div>
 
-        <div className="h-[13%] sm:h-[14%] lg:h-[12%] flex sm:items-center sm:pt-0 pt-6">
+        <div className="h-[14%] sm:h-[14%] lg:h-[12%] flex sm:items-center sm:pt-0 pt-6">
           <h4 className="font-semibold h-fit text-xs sm:text-lg lg:text-xl text-center lg:text-left w-full">
             {`2021 - ${moment.utc().format("YYYY")} © NTC DEPARTMENT, ALL RIGHTS RESERVED`}
           </h4>
@@ -39,7 +35,7 @@ const JoinUsSection = () => {
 
 const CommunityCard = () => {
   return (
-    <div className="h-56 sm:h-60 lg:h-[32.5rem] w-full relative">
+    <div className="h-[35rem] max-h-[60vh] w-full max-w-sm sm:max-w-none relative">
       <img src={placeholderImage} className="w-full h-full object-cover rounded-lg" />
 
       <div className="absolute bottom-0 left-0 h-16 sm:h-20 lg:h-24 text-white z-10 flex">
@@ -59,7 +55,7 @@ const CommunityCard = () => {
       </div>
 
       <div className="absolute bottom-4 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg" />
-      <div className="absolute bottom-4 left-0 w-full h-1/2 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
+      <div className="absolute bottom-4 left-0 w-full h-1/5 bg-gradient-to-t from-black/85 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/95 to-transparent rounded-b-lg" />
       <div className="absolute bottom-0 left-0 w-full h-5 bg-black rounded-b-lg" />
     </div>
